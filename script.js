@@ -30,6 +30,20 @@ window.addEventListener('scroll', (e) => {
   }
 })
 
+// =================================================Handles the login and signup popup
+const Connectionbuttons = document.querySelectorAll('#option-menu > button')
+Connectionbuttons.forEach( button => button.addEventListener('click', () => {
+  const filter = document.querySelector(`#${button.value}-filter`)
+  const form = document.querySelector(`#${button.value}-form`)
+  filter.style['top'] = '0'
+  filter.style['z-index'] = 200
+  filter.style['opacity'] = 1
+  form.style['z-index'] = 300
+
+}))
+
+
+
 // =================================================this handles the swap action of the signup block
 function handleNextBlock() {
   const signupBlocks = document.querySelectorAll('.form-main .block')
@@ -89,37 +103,74 @@ document.querySelectorAll('#option-menu > button').forEach( element => {
 
 
 // ========================================== Handle pagination
+const pageButtons = document.querySelectorAll('.page-button')
+const nextPageButton = document.querySelector('#next-page-btn')
+const previousPageButton = document.querySelector('#previous-page-btn')
 
 function hideOffers() {
-  const offersList = document.querySelectorAll('.offer-on-page')
-  offersList.forEach(item => {
-    item.classList.remove('offer-on-page')
-    console.log(item)
-  })
+  document.querySelectorAll('.offer-on-page').forEach(item => item.classList.remove('offer-on-page'))
 }
 
 function loadOffers(start, amount) {
-  console.log('start on load: ', start)
   const offersList = document.querySelectorAll('.internship-card')
+
+  if (offersList.length <= start) return 
+
   for(let i = 0; i < amount; i++) {
-    const offer = offersList[start + i]
-    offer.classList.add('offer-on-page')
-    console.log('offer: ', i)
+    offersList[start + i].classList.add('offer-on-page')
   }
 }
 
+function resetPageButtons(targetPageNumber) {
+  const targetGroupNumber = Math.floor((targetPageNumber - 1) / pageButtons.length) + 1
+  const currentGroupNumber = parseInt(document.querySelector("[name='current-btn-group']").value)
+  const targetGroupStart = pageButtons.length * (targetGroupNumber - 1) + 1
+  const currentGroupStart = pageButtons.length * (currentGroupNumber - 1) + 1
+
+  for(let i = 0; i < pageButtons.length; i++) {
+    const button = pageButtons[i]
+    button.classList.replace(`btn-${i + currentGroupStart}`, `btn-${i + targetGroupStart}`)
+    button.value = i + targetGroupStart
+    button.innerHTML = i + targetGroupStart
+  }
+
+  document.querySelector("[name='current-btn-group']").value = targetGroupNumber
+}
+
+function goToPage(pageNumber) {
+
+  if (pageNumber <= 0) return
+
+  hideOffers()
+  loadOffers(12 * (parseInt(pageNumber) - 1), 12)
+
+  document.querySelector('.active-page-btn').classList.remove('active-page-btn')
+
+  console.log('class: ', `.btn-${pageNumber}`)
+  document.querySelector(`.btn-${pageNumber}`).classList.add('active-page-btn')
+
+  nextPageButton.value = pageNumber + 1
+  previousPageButton.value = pageNumber - 1
+}
+
+
 // first load the first 12 offers
 window.addEventListener('load', () => {
-  console.log('hey')
   loadOffers(start=0, amount=12)
 })
 
 // what happens when a button is clicked
-const buttons = document.querySelectorAll('.page-button')
-buttons.forEach( button => button.addEventListener('click', () => {
-  const nextPage = parseInt(button.value)
-   
-  hideOffers()
-  loadOffers(12 * (nextPage - 1), 12)
-  document.querySelector('.active-page-btn').classList.remove('active-page-btn')
+pageButtons.forEach( button => button.addEventListener('click', () => {
+  resetPageButtons(parseInt(button.value))
+  goToPage(parseInt(button.value))
 }))
+
+nextPageButton.addEventListener('click', () => {
+  resetPageButtons(parseInt(nextPageButton.value))
+  goToPage(parseInt(nextPageButton.value))
+})
+
+previousPageButton.addEventListener('click', () => {
+  resetPageButtons(parseInt(previousPageButton.value))
+  goToPage(parseInt(previousPageButton.value))
+})
