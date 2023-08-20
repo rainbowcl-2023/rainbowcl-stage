@@ -30,6 +30,20 @@ window.addEventListener('scroll', (e) => {
   }
 })
 
+// =================================================Handles the login and signup popup
+const Connectionbuttons = document.querySelectorAll('#option-menu > button')
+Connectionbuttons.forEach( button => button.addEventListener('click', () => {
+  const filter = document.querySelector(`#${button.value}-filter`)
+  const form = document.querySelector(`#${button.value}-form`)
+  filter.style['top'] = '0'
+  filter.style['z-index'] = 200
+  filter.style['opacity'] = 1
+  form.style['z-index'] = 300
+
+}))
+
+
+
 // =================================================this handles the swap action of the signup block
 function handleNextBlock() {
   const signupBlocks = document.querySelectorAll('.form-main .block')
@@ -122,4 +136,5 @@ buttons.forEach( button => button.addEventListener('click', () => {
   hideOffers()
   loadOffers(12 * (nextPage - 1), 12)
   document.querySelector('.active-page-btn').classList.remove('active-page-btn')
+  button.classList.add('active-page-btn')
 }))
