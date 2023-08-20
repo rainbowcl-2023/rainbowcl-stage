@@ -118,7 +118,7 @@ window.addEventListener('load', () => {
 const buttons = document.querySelectorAll('.page-button')
 buttons.forEach( button => button.addEventListener('click', () => {
   const nextPage = parseInt(button.value)
-  
+   
   hideOffers()
   loadOffers(12 * (nextPage - 1), 12)
   document.querySelector('.active-page-btn').classList.remove('active-page-btn')
