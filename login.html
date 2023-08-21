@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img id="logo-image" src="assets/icons/africarxiv.svg" alt=""></a>
+        <div id="option-menu">
+            <select name="languages" id="language-select">
+                <option value="francais">Fr</option>
+                <option value="englais">Eng</option>
+            </select>
+            <a href="login.html" id="login-btn-link">Login</a>
+            <a href="signup.html" id="signup-btn-link">Signup</a>
+        </div>
+        <nav class="navbar">
+            <a class="nav-link" href="">Acceuil</a>
+            <a class="nav-link" href="">A propos de nous</a>
+            <a class="nav-link" href="">Nos services</a>
+            <a class="nav-link" href="">Realiser un CV</a>
+            <a class="nav-link" href="">Trouver un stage</a>
+            <a class="nav-link" href="">Trouver une formation</a>
+            <a class="nav-link" href="">Actualite</a>
+            <a class="nav-link" href="">Nous contacter</a>
+        </nav>
+    </header>
+    <main id="login-main">
+        <div class="main-filter">
+            <form id="login-form" action="" method="POST">
+                <div class="form-header">
+                    <h2>Connectez vous a votre compte</h2>
+                </div>
+                <div class="form-main">
+                    <div class="block">
+                        <div class="form-input">
+                            <input type="email" required>
+                            <label for="">Email</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="password" required>
+                            <label for="">Mot de passe</label>
+                        </div>
+                        <div id="social-connect">
+                            <a class="connect-option">
+                                <img src="assets/icons/google.svg" alt="">
+                            </a>
+                            <a class="connect-option">
+                                <img src="assets/icons/facebook.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <button id="login-button" type="submit">se connecter</button>
+                    <div class="form-input">
+                        <p>Vous n'avez pas de compte ? <a href="signup.html">Inscrivez vous ici</a></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
