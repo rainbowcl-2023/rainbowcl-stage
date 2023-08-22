@@ -490,7 +490,7 @@ header {
 }
 
 .offer-on-page {
-    display: block;
+    display: flex;
 }
 
 .internship-card:hover {
