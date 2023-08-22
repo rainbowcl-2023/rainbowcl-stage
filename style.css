@@ -48,12 +48,14 @@
 *====================================================================
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
-    font-family: Roboto, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', 'Roboto', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 a {
@@ -69,6 +71,11 @@ input {
     outline: none;
 }
 
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 
 
 
@@ -264,7 +271,193 @@ header {
 *====================================================================
 */
 
+/* offer detail main section */
 
+#offer-detail-main {
+    height: 250vh;
+    padding-top: 15vh;
+    width: 70%;
+}
+
+#enterprise-asset {
+    height: 60vh;
+    width: 100%;
+}
+
+#enterprise-asset img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+#offer-header-section {
+    padding-top: 1.5em;
+    height: 18vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 1em;
+    border-bottom: 2px solid #6d6f70;
+    box-sizing: content-box;
+}
+
+#header-info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#header-info h1 {
+    font-size: 2em;
+}
+
+#header-info p {
+    display: flex;
+    align-items: center;
+}
+
+#header-info p img {
+    height: 30px;
+    width: 30px;
+    margin-right: 1em;
+}
+
+#apply-btn {
+    padding: 1.5em;
+    background-color: var(--actionable-color);
+    border-radius: 5px;
+    font-size: 1.2em;
+    color: white
+}
+
+#offer-detail-section {
+    padding-top: 1.5em;
+    height: 18vh;
+    border-bottom: 2px solid #6d6f70;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 1em;
+    box-sizing: content-box;
+}
+
+#offer-detail-section h2 {
+    font-size: 1.8em;
+}
+
+#offer-detail-section p {
+    width: 60%;
+    word-wrap: break-word;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+
+#offer-profile-section {
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+    box-sizing: content-box;
+    border-bottom: 2px solid black;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#offer-profile-section h2 {
+    font-size: 1.8em;
+}
+
+#offer-profile-section ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-left: 2.5em;
+}
+
+#offer-profile-section ul li {
+    list-style: disc;
+    font-size: 1.2em;
+}
+
+#offer-map-section {
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+    box-sizing: content-box;
+    border-bottom: 2px solid black;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#offer-map-section iframe {
+    width: 70%;
+}
+
+#offer-map-section a {
+    width: 70%;
+    padding: 0.7em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.2em;
+    color: var(--actionable-color);
+}
+
+#offer-review-section {
+    width: 100%;
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+    box-sizing: content-box;
+    border-bottom: 2px solid black;
+    height: 35vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+
+}
+
+.review-card {
+    height: 100%;
+    width: 25%;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1em;
+}
+
+.review-header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 30%;
+}
+
+.reviewer-image {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: black;
+}
+
+.reviewer-detail {
+    width: 70%;
+}
+
+.review-body p {
+    font-size: 1em;
+    line-height: 1.5em;
+}
 /* Index main section */
 
 #index-main {
@@ -856,6 +1049,9 @@ header {
 *====================================================================
 */
 
+#index-footer {
+    width: 100%;
+}
 
 #partners-section {
     height: 40vh;
