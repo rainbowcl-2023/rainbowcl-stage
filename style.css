@@ -48,12 +48,14 @@
 *====================================================================
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
-    font-family: Roboto, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "segeo ui", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 a {
@@ -67,6 +69,11 @@ li {
 input {
     border: none;
     outline: none;
+}
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 
@@ -264,6 +271,156 @@ header {
 *====================================================================
 */
 
+/* offer detail main section */
+
+#offer-detail-main{
+    height: 250vh;
+    width: 70%;
+    padding-top: 15vh;
+    
+}
+#enterprise-assets{
+    height: 60vh;
+    width: 100%;
+}
+#enterprise-assets img{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+#offer-header-section{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5em;
+    height: 18vh;
+    flex-direction: row;
+    align-items: flex-end;
+    border-bottom: 2px solid black;
+    padding-bottom: 1em;
+    box-sizing: content-box;
+}
+#header-info{
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+   height: 100%;
+}
+#offer-header-section button{
+    height: 70px;
+    width: 20%;
+    background-color: var(--actionable-color);
+    border-radius: 15px;
+    font-size: 1em;
+    color: white;
+    
+}
+#header-info h1{
+    font-size: 2em;
+}
+#header-info p{
+    display: flex;
+    align-items: center;
+}
+#header-info p img{
+    height: 30px;
+    width: 30px;
+    margin-right: 1em;
+}
+#offer-detail-section{
+    padding-top: 1.2em;
+    border-bottom: 2px solid black;
+    padding-bottom: 1em;
+}
+#offer-detail-section h1{
+    font-size: 1.8em;
+}
+#offer-detail-section p{
+    word-wrap: break-word;
+    line-height: 1.5em;
+    width: 60%;
+    padding-top: 1em;
+}
+#offer-profile-section{
+    padding-top: 1.2em;
+    border-bottom: 2px solid black;
+    padding-bottom: 1em;
+}
+#offer-profile-section h1{
+    font-size: 1.8em;
+}
+#offer-profile-section ul{
+   padding-left: 30px;
+    
+}
+#offer-profile-section ul li{
+    list-style: disc;
+    padding-top: 1em;
+}
+#offer-map-section{
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+    box-sizing: content-box;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 2px solid black;
+
+}
+#offer-map-section iframe{
+    width: 70%;
+}
+#offer-map-section a{
+   width: 70%;
+   padding: 0.7em;
+   display: flex;
+   color: var(--actionable-color);
+}
+#offer-review-section{
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    display: flex;
+    justify-content: center;
+    height: 35vh;
+    border-bottom: 2px solid black;
+    box-sizing: content-box;
+}
+.review-card{
+    height: 100%;
+    width: 25%;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 1em;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1em;
+    flex-direction: column;
+}
+.review-header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 30%;
+}
+.review-image{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: black;
+}
+.review-detail{
+    width: 70%;
+}
+.review-body p{
+    font-size: 1em;
+    line-height: 1.5em;
+}
 
 /* Index main section */
 
