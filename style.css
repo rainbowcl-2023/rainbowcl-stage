@@ -292,12 +292,23 @@ header {
     display: flex;
     justify-content: space-between;
     padding-top: 1.5em;
-    height: 18vh;
+    height: 40vh;
     flex-direction: row;
     align-items: flex-end;
     border-bottom: 2px solid black;
     padding-bottom: 1em;
     box-sizing: content-box;
+}
+#internship-detail{
+    width: 90%;
+    height: 50vh;
+    position: relative;
+}
+.name-enterprise{
+    position: absolute;
+   top: 20px;
+   left: 20px;
+    
 }
 #header-info{
    display: flex;
@@ -327,35 +338,90 @@ header {
     margin-right: 1em;
 }
 #offer-detail-section{
-    padding-top: 1.2em;
-    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5em;
     padding-bottom: 1em;
-}
-#offer-detail-section h1{
-    font-size: 1.8em;
-}
-#offer-detail-section p{
-    word-wrap: break-word;
-    line-height: 1.5em;
-    width: 60%;
-    padding-top: 1em;
-}
-#offer-profile-section{
-    padding-top: 1.2em;
     border-bottom: 2px solid black;
-    padding-bottom: 1em;
-}
-#offer-profile-section h1{
-    font-size: 1.8em;
-}
-#offer-profile-section ul{
-   padding-left: 30px;
+    height: 70vh;
+    gap: 1em;
+    
     
 }
-#offer-profile-section ul li{
-    list-style: disc;
-    padding-top: 1em;
+.detail-block{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 33%;
+    padding-left: 1em;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: #0080800c;
 }
+.block-icon{
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.block-icon img{
+    height: 40px;
+    object-fit: contain;
+
+}
+.block-description{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
+
+}
+.block-description h2{
+    font-size: 1.4em;
+    text-align: center;
+    
+}
+.block-description p{
+    line-height: 1.8em;
+     width: 100%;
+     text-align: justify;
+     font-size: 1em;
+     padding-right: 1em;
+}
+.block-description a{
+    width: 100%;
+
+}
+.block-description ul{
+    gap: 1em;
+    height: 70%;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+}
+.block-description ul li{
+    border: 2px solid #eab308;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1em;
+    height: 50px;
+    gap: 1em;
+    border-radius: 5px;
+    background-color: #eab20817;
+ }
+ .block-description ul li img{
+    height: 30px;
+    width: 30px;
+   
+    
+ }
+
 #offer-map-section{
     padding-top: 1.5em;
     padding-bottom: 1em;
@@ -377,7 +443,7 @@ header {
    display: flex;
    color: var(--actionable-color);
 }
-#offer-review-section{
+ /* #offer-review-section{
     padding-top: 1.5em;
     padding-bottom: 1em;
     display: flex;
@@ -420,7 +486,7 @@ header {
 .review-body p{
     font-size: 1em;
     line-height: 1.5em;
-}
+} */
 
 /* Index main section */
 
@@ -1012,7 +1078,9 @@ header {
 *
 *====================================================================
 */
-
+#index-footer{
+    width: 100%;
+}
 
 #partners-section {
     height: 40vh;
@@ -1117,6 +1185,7 @@ header {
 #newsletter-form button:hover {
     background-color: #039696;
 }
+
 
 #index {
     height: fit-content;
