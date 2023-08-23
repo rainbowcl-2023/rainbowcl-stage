@@ -278,7 +278,7 @@ header {
 }
 
 #enterprise-asset {
-    height: 60vh;
+    height: 50vh;
     width: 100%;
 }
 
@@ -289,13 +289,13 @@ header {
 }
 
 #offer-header-section {
-    padding-top: 1.5em;
-    height: 18vh;
+    padding-top: 0.7em;
+    height: 30vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    padding-bottom: 1em;
+    padding-bottom: 0.7em;
     border-bottom: 2px solid #6d6f70;
     box-sizing: content-box;
 }
@@ -346,38 +346,19 @@ header {
     flex-direction: column;
     height: 100%;
     width: 33%;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
     border: 1px solid black;
     border-radius: 5px;
+
+    border-color: #085f5f;
+    background-color: #00808015;
 }
 
-#enterprise-detail {
-    border-color: #2f7af1c2;
-    background-color: #3b83f609;
+.detail-block h2 {
+    color: #008080;
 }
 
-#enterprise-detail .block-description h2 {
-    color: #3b82f6;
-}
-
-#internship-detail {
-    border-color: #21a752d2;
-    background-color: #22c55e0a;
-}
-
-#internship-detail .block-description h2 {
-    color: #22c55e;
-}
-
-#requirement-detail {
-    border-color: #caa228e5;
-    background-color: #eab20809;
-}
-
-#requirement-detail .block-description h2 {
-    color: #eab308;
-}
 
 .block-icon {
     display: flex;
@@ -403,6 +384,35 @@ header {
     gap: 1em;
 }
 
+#internship-detail{
+    width: 80%;
+    position: relative;
+}
+
+#internship-detail .block-icon {
+    height: 20%;
+}
+
+#company-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #008080;
+
+}
+
+#internship-detail .block-description p {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+
+#internship-detail .block-description p img{
+    height: 30px;
+    object-fit: contain;
+}
+
 .block-description h2 {
     font-size: 1.7em;
     text-align: center;
@@ -424,10 +434,10 @@ header {
     width: 100%;
 }
 
-.block-description ul li {
+#requirement-detail .block-description ul li {
     padding: 1em;
-    border: 2px solid #eab308;
-    background-color: #eab20834;
+    border: 2px solid #057777dc;
+    background-color: #00808042;
     border-radius: 5px;
     width: 100%;
     display: flex;
