@@ -280,7 +280,7 @@ header {
     
 }
 #enterprise-assets{
-    height: 60vh;
+    height: 50vh;
     width: 100%;
 }
 #enterprise-assets img{
@@ -291,8 +291,8 @@ header {
 #offer-header-section{
     display: flex;
     justify-content: space-between;
-    padding-top: 1.5em;
-    height: 40vh;
+    padding-top: 1em;
+    height: 30vh;
     flex-direction: row;
     align-items: flex-end;
     border-bottom: 2px solid black;
@@ -333,7 +333,7 @@ header {
     align-items: center;
 }
 #header-info p img{
-    height: 30px;
+    height: 25px;
     width: 30px;
     margin-right: 1em;
 }
@@ -343,7 +343,7 @@ header {
     padding-top: 1.5em;
     padding-bottom: 1em;
     border-bottom: 2px solid black;
-    height: 70vh;
+    height: 65vh;
     gap: 1em;
     
     
@@ -354,7 +354,7 @@ header {
     height: 100%;
     width: 33%;
     padding-left: 1em;
-    border: 3px solid black;
+    border: 1px solid #00808000;
     border-radius: 5px;
     background-color: #0080800c;
 }
@@ -377,7 +377,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 1em;
+    gap: 0.4em;
 
 }
 .block-description h2{
@@ -404,7 +404,7 @@ header {
     flex-direction: column;
 }
 .block-description ul li{
-    border: 2px solid #eab308;
+    border: 1px solid #008080;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -413,7 +413,7 @@ header {
     height: 50px;
     gap: 1em;
     border-radius: 5px;
-    background-color: #eab20817;
+    background-color: #0080801e;
  }
  .block-description ul li img{
     height: 30px;
@@ -432,7 +432,7 @@ header {
     align-items: center;
     flex-direction: column;
     border-bottom: 2px solid black;
-
+    
 }
 #offer-map-section iframe{
     width: 70%;
@@ -491,7 +491,8 @@ header {
 /* Index main section */
 
 #index-main {
-    height: 250vh;
+    height: 280vh;
+    
 }
 
 #hero-section {
@@ -601,7 +602,7 @@ header {
     align-items: center;
     flex-direction: column;
     grid-column-start: 2;
-    height: 160vh;
+    height: 180vh;
 }
 
 
@@ -664,7 +665,7 @@ header {
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    min-height: 150vh;
+    min-height: 180vh;
     width: 100%;
     padding: 10px;
     padding-top: 3em;
@@ -690,7 +691,7 @@ header {
     margin-top: 2em;
     padding-right: 20px;
     width: 100%;
-    height: 120vh;
+    height: 150vh;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -713,7 +714,7 @@ header {
 }
 
 .offer-on-page {
-    display: block;
+    display: flex;
 }
 
 .internship-card:hover {
@@ -753,7 +754,15 @@ header {
 
 .internship-card p {
     font-size: 0.8rem;
-    margin-top: 0.8rem;
+    margin-top: 0.7rem;
+}
+.detail-link{
+    position: absolute;
+    bottom: 10px;
+    padding: 0.5em;
+    color: white;
+    background-color: var(--actionable-color);
+    border: 1px solid black;
 }
 
 .share-offer-section {
@@ -1080,6 +1089,7 @@ header {
 */
 #index-footer{
     width: 100%;
+    
 }
 
 #partners-section {
