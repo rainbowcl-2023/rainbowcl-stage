@@ -482,56 +482,7 @@ header {
     color: var(--actionable-color);
 }
 
-#offer-review-section {
-    width: 100%;
-    padding-top: 1.5em;
-    padding-bottom: 1em;
-    box-sizing: content-box;
-    border-bottom: 2px solid black;
-    height: 35vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1em;
 
-}
-
-.review-card {
-    height: 100%;
-    width: 25%;
-    border-radius: 5px;
-    border: 1px solid black;
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 1em;
-}
-
-.review-header {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    height: 30%;
-}
-
-.reviewer-image {
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
-    background-color: black;
-}
-
-.reviewer-detail {
-    width: 70%;
-}
-
-.review-body p {
-    font-size: 1em;
-    line-height: 1.5em;
-}
 /* Index main section */
 
 #index-main {
@@ -740,6 +691,12 @@ header {
     align-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+#offers-list a {
+    display: flex;
+    height: fit-content;
+    width: fit-content;
 }
 
 .internship-card {
