@@ -486,7 +486,7 @@ header {
 /* Index main section */
 
 #index-main {
-    height: 250vh;
+    height: 280vh;
 }
 
 #hero-section {
@@ -515,7 +515,7 @@ header {
     grid-template-columns: 1fr 5fr;
     height: max-content;
     width: 100%;
-    height: 190vh;
+    height: 220vh;
 }   
 
 #fields-sidebar {
@@ -596,7 +596,7 @@ header {
     align-items: center;
     flex-direction: column;
     grid-column-start: 2;
-    height: 160vh;
+    height: 190vh;
 }
 
 
@@ -659,7 +659,7 @@ header {
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    min-height: 150vh;
+    min-height: 180vh;
     width: 100%;
     padding: 10px;
     padding-top: 3em;
@@ -685,7 +685,7 @@ header {
     margin-top: 2em;
     padding-right: 20px;
     width: 100%;
-    height: 120vh;
+    height: 150vh;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -754,7 +754,7 @@ header {
 
 .internship-card p {
     font-size: 0.8rem;
-    margin-top: 0.8rem;
+    margin-top: 0.7rem;
 }
 
 .share-offer-section {
@@ -779,6 +779,15 @@ header {
     height: 20px;
     width: 20px;
     color: black;
+}
+
+.detail-link {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    padding: 0.7em 2.5em;
+    background-color: var(--actionable-color);
+    color: white;
 }
 
 
