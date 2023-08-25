@@ -284,11 +284,11 @@ header {
     padding-top: 15vh;
     
 }
-#enterprise-assets{
+#enterprise-asset {
     height: 50vh;
     width: 100%;
 }
-#enterprise-assets img{
+#enterprise-asset img{
     height: 100%;
     width: 100%;
     object-fit: fill;
