@@ -123,3 +123,4 @@ buttons.forEach( button => button.addEventListener('click', () => {
   loadOffers(12 * (nextPage - 1), 12)
   document.querySelector('.active-page-btn').classList.remove('active-page-btn')
 }))
+
