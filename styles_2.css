@@ -19,7 +19,9 @@ body {
     font-size: 12px;
     /* background-color: black; */
 }
-
+.middle{
+    width: 50%;
+}
 .container {
     display: flex;
     /* width: 80%; */
@@ -32,11 +34,12 @@ body {
     flex-direction: row;
 }
 .column {
-    /* flex: 2; */
-    padding: 20px;
-    align-items: center;
+    /* flex: 1; */
+    padding-left: 10px;
+    /* align-items: center; */
     /* justify-content: center; */
-    width: 50%;
+    flex-direction: column;
+    /* width: 50%; */
     /* background-color: red; */
 }
 
