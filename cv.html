@@ -14,8 +14,8 @@
 </head>
 
 <body>
-    <header style="background-color: black;"> 
-        <a  id="previous-link">
+    <header>
+        <a id="previous-link">
             <img src="./assets/icons/arrow-previous-ltr.svg" alt="previous">
             <span>Curriculum vitae</span>
         </a>
@@ -24,28 +24,28 @@
             <img src="./assets/icons/tick-outline.svg" alt="tick">
         </div>
         <div id="cv-download">
-                <div class="button-direction">                   
-                    <button class="go-button">
-                        <img src="./assets/icons/arrow-go-back-line.svg" alt="go-back">
-                    </button>
-                    <button class="go-button">
-                        <img src="./assets/icons/go-on.svg" alt="go-on">
-                    </button>
-                    </div>
-                <select name="" id="">
-                    <option value="">Francais</option>
-                    <option value="">Anglais</option>
-                    <option value="">Espagnol</option>
-                    <option value="">Allemand</option>
-                </select>            
-                <button class="action-button">
-                    <img src="./assets/icons/import.svg" alt="import">
-                    <span>Importer</span>
+            <div class="button-direction">
+                <button class="go-button">
+                    <img src="./assets/icons/arrow-go-back-line.svg" alt="go-back">
                 </button>
-                <button class="action-button">
-                    <img src="./assets/icons/sharp-download.svg" alt="download">
-                    <span>Télécharger</span>
+                <button class="go-button">
+                    <img src="./assets/icons/go-on.svg" alt="go-on">
                 </button>
+            </div>
+            <select name="" id="">
+                <option value="">Francais</option>
+                <option value="">Anglais</option>
+                <option value="">Espagnol</option>
+                <option value="">Allemand</option>
+            </select>
+            <button class="action-button">
+                <img src="./assets/icons/import.svg" alt="import">
+                <span>Importer</span>
+            </button>
+            <button class="action-button">
+                <img src="./assets/icons/sharp-download.svg" alt="download">
+                <span>Télécharger</span>
+            </button>
         </div>
     </header>
     <main class=" container">
@@ -99,14 +99,13 @@
                             </div>
                         </div>
                         <div>
-                            
                             <div class="row">
                                 <div class="input column">
-                                    <label for="">Prénom</label>
+                                    <label for="">Code postal</label>
                                     <input type="text" name="" id="">
                                 </div>
                                 <div class="input column">
-                                    <label for="">Prénom</label>
+                                    <label for="">Ville</label>
                                     <input type="text" name="" id="">
                                 </div>
                             </div>
@@ -119,12 +118,228 @@
                 <div class="input column">
                     <label for="">Description</label>
                     <textarea name="" id="" cols="30" rows="10"></textarea>
-                    </div>
+                </div>
             </div>
-
-            <button class="accordion" id="inf1">Section 3</button>
+            <button class="accordion" id="inf1">Formation</button>
             <div class="panel">
-                <p>Lorem ipsum...</p>
+                <div class="input column">
+                    <label for="">Formation</label>
+                    <input type="text" name="" id="">
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="input column">
+                            <label for="">Etablissement</label>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="input column">
+                            <label for="">Ville</label>
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="input column">
+                            <label for="">Date de début</label>
+                            <select name="" id="">
+                                <option value="">Mois</option>
+                                <option value="">Janvier</option>
+                                <option value="">Février</option>
+                                <option value="">Mars</option>
+                                <option value="">Avril</option>
+                                <option value="">Mai</option>
+                                <option value="">Juin</option>
+                                <option value="">Juillet</option>
+                                <option value="">Aout</option>
+                                <option value="">Septembre</option>
+                                <option value="">Octobre</option>
+                                <option value="">Novembre</option>
+                                <option value="">Décembre</option>
+                            </select>
+                        </div>
+                        <div class="input column">
+                            <label for="">.</label>
+                            <select name="" id="">
+                                <option value="">Année</option>
+                                <option value="">2023</option>
+                                <option value="">2022</option>
+                                <option value="">2021</option>
+                                <option value="">2020</option>
+                                <option value="">2019</option>
+                                <option value="">2018</option>
+                                <option value="">2017</option>
+                                <option value="">2016</option>
+                                <option value="">2015</option>
+                                <option value="">2014</option>
+                                <option value="">2013</option>
+                                <option value="">2012</option>
+                            </select>
+                        </div>
+                        <div class="input column">
+                            <div class="input column">
+                                <label for="">Date de fin</label>
+                                <select name="" id="">
+                                    <option value="">Mois</option>
+                                    <option value="">Janvier</option>
+                                    <option value="">Février</option>
+                                    <option value="">Mars</option>
+                                    <option value="">Avril</option>
+                                    <option value="">Mai</option>
+                                    <option value="">Juin</option>
+                                    <option value="">Juillet</option>
+                                    <option value="">Aout</option>
+                                    <option value="">Septembre</option>
+                                    <option value="">Octobre</option>
+                                    <option value="">Novembre</option>
+                                    <option value="">Décembre</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input column">
+                            <label for="">.</label>
+                            <select name="" id="">
+                                <option value="">Année</option>
+                                <option value="">2023</option>
+                                <option value="">2022</option>
+                                <option value="">2021</option>
+                                <option value="">2020</option>
+                                <option value="">2019</option>
+                                <option value="">2018</option>
+                                <option value="">2017</option>
+                                <option value="">2016</option>
+                                <option value="">2015</option>
+                                <option value="">2014</option>
+                                <option value="">2013</option>
+                                <option value="">2012</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input column">
+                        <label for="">Description</label>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+            </div>
+            <button class="accordion" id="inf1">Expérience professionnelle</button>
+            <div class="panel">
+                <div class="input column">
+                    <label for="">Poste</label>
+                    <input type="text" name="" id="">
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="input column">
+                            <label for="">Employeur</label>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="input column">
+                            <label for="">Ville</label>
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="input column">
+                            <label for="">Date de début</label>
+                            <select name="" id="">
+                                <option value="">Mois</option>
+                                <option value="">Janvier</option>
+                                <option value="">Février</option>
+                                <option value="">Mars</option>
+                                <option value="">Avril</option>
+                                <option value="">Mai</option>
+                                <option value="">Juin</option>
+                                <option value="">Juillet</option>
+                                <option value="">Aout</option>
+                                <option value="">Septembre</option>
+                                <option value="">Octobre</option>
+                                <option value="">Novembre</option>
+                                <option value="">Décembre</option>
+                            </select>
+                        </div>
+                        <div class="input column">
+                            <label for="">.</label>
+                            <select name="" id="">
+                                <option value="">Année</option>
+                                <option value="">2023</option>
+                                <option value="">2022</option>
+                                <option value="">2021</option>
+                                <option value="">2020</option>
+                                <option value="">2019</option>
+                                <option value="">2018</option>
+                                <option value="">2017</option>
+                                <option value="">2016</option>
+                                <option value="">2015</option>
+                                <option value="">2014</option>
+                                <option value="">2013</option>
+                                <option value="">2012</option>
+                            </select>
+                        </div>
+                        <div class="input column">
+                            <div class="input column">
+                                <label for="">Date de fin</label>
+                                <select name="" id="">
+                                    <option value="">Mois</option>
+                                    <option value="">Janvier</option>
+                                    <option value="">Février</option>
+                                    <option value="">Mars</option>
+                                    <option value="">Avril</option>
+                                    <option value="">Mai</option>
+                                    <option value="">Juin</option>
+                                    <option value="">Juillet</option>
+                                    <option value="">Aout</option>
+                                    <option value="">Septembre</option>
+                                    <option value="">Octobre</option>
+                                    <option value="">Novembre</option>
+                                    <option value="">Décembre</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input column">
+                            <label for="">.</label>
+                            <select name="" id="">
+                                <option value="">Année</option>
+                                <option value="">2023</option>
+                                <option value="">2022</option>
+                                <option value="">2021</option>
+                                <option value="">2020</option>
+                                <option value="">2019</option>
+                                <option value="">2018</option>
+                                <option value="">2017</option>
+                                <option value="">2016</option>
+                                <option value="">2015</option>
+                                <option value="">2014</option>
+                                <option value="">2013</option>
+                                <option value="">2012</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input column">
+                        <label for="">Description</label>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+            </div>
+            <button class="accordion" id="inf1">Compétence</button>
+            <div class="panel">
+                <div class="input column">
+                    <label for="">Compétence</label>
+                    <input type="text" name="" id="">
+                </div>
+                <div class="input column">
+                    <label for="">Niveau</label>
+                    <div>
+                        <div class="row">
+                            <div class="input column">
+                                <input type="range" name="" id="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="button-add-section"> Ajouter une Compétence </button>
+
             </div>
         </section>
         <section class="column middle main-content" id="generate-cv">
