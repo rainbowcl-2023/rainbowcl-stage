@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="styles_2.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap" rel="stylesheet">
@@ -13,52 +14,115 @@
 </head>
 
 <body>
+    <header> 
+        <a  id="previous-link">
+            <img src="./assets/icons/arrow-previous-ltr.svg" alt="previous">
+            <span>Curriculum vitae</span>
+        </a>
+        <div id="cv-title">
+            <h1>CV sans titre</h1>
+            <img src="./assets/icons/tick-outline.svg" alt="tick">
+        </div>
+        <div id="cv-download">
+                <div class="button-direction">                   
+                    <button class="go-button">
+                        <img src="./assets/icons/arrow-go-back-line.svg" alt="go-back">
+                    </button>
+                    <button class="go-button">
+                        <img src="./assets/icons/go-on.svg" alt="go-on">
+                    </button>
+                    </div>
+                <select name="" id="">
+                    <option value="">Francais</option>
+                    <option value="">Anglais</option>
+                    <option value="">Espagnol</option>
+                    <option value="">Allemand</option>
+                </select>            
+                <button class="action-button">
+                    <img src="./assets/icons/import.svg" alt="import">
+                    <span>Importer</span>
+                </button>
+                <button class="action-button">
+                    <img src="./assets/icons/sharp-download.svg" alt="download">
+                    <span>Télécharger</span>
+                </button>
+        </div>
+    </header>
     <main class=" container">
-
-        <section class="column middle" id="form-cv">
-            <button class="accordion" onclick="show(pan1)">Informations personnelles</button>
-            <div class="panel">
-                <br>
-
+        <section class="column middle">
+            <button class="accordion">Informations Personnelles</button>
+            <div class="panel" id="inf1">
+                <br></br>
                 <!-- <input type="text" value="Yo"> -->
                 <section class="perso">
-                    <div class="row">
-                        <div class="column">
-                            <input type="button" value="" id="btnImg">
+                    <div class="column">
+                        <div class="row">
+                            <div class="column">
+                                <input type="button" value="" id="btnImg">
+                            </div>
+                            <div class="column">
+                                <div class="row">
+                                    <div class="input column">
+                                        <label for="">Prénom</label>
+                                        <input type="text" name="" id="">
+                                    </div>
+                                    <div class="input column">
+                                        <label for="">Nom de famille</label>
+                                        <input type="text" name="" id="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input column">
+                                        <label for="">Email</label>
+                                        <input type="text" name="" id="">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="column">
+                        <br>
+                        <div class="row">
+                            <div class="input column">
+                                <label for="">Titre du profil</label>
+                                <input type="text" name="" id="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input column">
+                                <label for="">Numéro de téléphone</label>
+                                <input type="text" name="" id="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input column">
+                                <label for="">Adresse</label>
+                                <input type="text" name="" id="">
+                            </div>
+                        </div>
+                        <div>
+                            
                             <div class="row">
                                 <div class="input column">
                                     <label for="">Prénom</label>
                                     <input type="text" name="" id="">
                                 </div>
                                 <div class="input column">
-                                    <label for="">Nom de famille</label>
-                                    <input type="text" name="" id="">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input column">
-                                    <label for="">Email</label>
+                                    <label for="">Prénom</label>
                                     <input type="text" name="" id="">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <br>
             </div>
-            <button class="accordion">Profil</button>
+            <button class="accordion" id="inf1">Profil</button>
             <div class="panel">
-                <div class="column">
-                    <div class="input column">
-                        <label for="">Prénom</label>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                <div class="input column">
+                    <label for="">Description</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
                     </div>
-                </div>
             </div>
 
-            <button class="accordion">Section 3</button>
+            <button class="accordion" id="inf1">Section 3</button>
             <div class="panel">
                 <p>Lorem ipsum...</p>
             </div>
