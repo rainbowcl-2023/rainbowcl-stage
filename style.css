@@ -92,7 +92,7 @@ body {
 *====================================================================
 */
 
-header {
+#index-header {
     position: fixed;
     width: 100%;
     display: flex;
@@ -719,12 +719,15 @@ header {
     display: none;
 }
 
+
+
 .offer-on-page {
     display: flex;
 }
 
 .internship-card:hover {
-    box-shadow: 0px -2px 20px 0px rgba(179, 185, 232, 0.534);
+    box-shadow: 0px -2px 20px 0px #b3b9e888;
+    opacity: 0.9;
 }
 
 .internship-card .image-section {
