@@ -55,7 +55,7 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
-    font-family: "segeo ui", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 a {
@@ -76,6 +76,11 @@ body{
     flex-direction: column;
 }
 
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 
 
 
@@ -87,7 +92,7 @@ body{
 *====================================================================
 */
 
-header {
+#index-header {
     position: fixed;
     width: 100%;
     display: flex;
@@ -279,220 +284,215 @@ header {
     padding-top: 15vh;
     
 }
-#enterprise-assets{
+#enterprise-asset {
     height: 50vh;
     width: 100%;
 }
-#enterprise-assets img{
+#enterprise-asset img{
     height: 100%;
     width: 100%;
     object-fit: fill;
 }
-#offer-header-section{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 1em;
+
+#offer-header-section {
+    padding-top: 0.7em;
     height: 30vh;
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: flex-end;
-    border-bottom: 2px solid black;
-    padding-bottom: 1em;
+    padding-bottom: 0.7em;
+    border-bottom: 2px solid #6d6f70;
     box-sizing: content-box;
 }
-#internship-detail{
-    width: 90%;
-    height: 50vh;
-    position: relative;
+
+#header-info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.name-enterprise{
-    position: absolute;
-   top: 20px;
-   left: 20px;
-    
-}
-#header-info{
-   display: flex;
-   justify-content: space-between;
-   flex-direction: column;
-   height: 100%;
-}
-#offer-header-section button{
-    height: 70px;
-    width: 20%;
-    background-color: var(--actionable-color);
-    border-radius: 15px;
-    font-size: 1em;
-    color: white;
-    
-}
-#header-info h1{
+
+#header-info h1 {
     font-size: 2em;
 }
-#header-info p{
+
+#header-info p {
     display: flex;
     align-items: center;
 }
-#header-info p img{
-    height: 25px;
+
+#header-info p img {
+    height: 30px;
     width: 30px;
     margin-right: 1em;
 }
-#offer-detail-section{
-    display: flex;
-    justify-content: center;
+
+#apply-btn {
+    padding: 1.5em;
+    background-color: var(--actionable-color);
+    border-radius: 5px;
+    font-size: 1.2em;
+    color: white
+}
+
+#offer-detail-section {
+    height: 65vh;
     padding-top: 1.5em;
     padding-bottom: 1em;
     border-bottom: 2px solid black;
-    height: 65vh;
-    gap: 1em;
-    
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.7em;
 }
-.detail-block{
+
+.detail-block {
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 33%;
-    padding-left: 1em;
-    border: 1px solid #00808000;
+    padding-left: 2em;
+    padding-right: 2em;
+    border: 1px solid black;
     border-radius: 5px;
-    background-color: #0080800c;
+
+    border-color: #085f5f;
+    background-color: #00808015;
 }
-.block-icon{
-  height: 30%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.detail-block h2 {
+    color: #008080;
 }
-.block-icon img{
-    height: 40px;
+
+
+.block-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+}
+
+.block-icon img {
+    height: 40%;
+    max-height: 70px;
     object-fit: contain;
-
 }
-.block-description{
+
+.block-description {
     width: 100%;
-    height: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.4em;
-
-}
-.block-description h2{
-    font-size: 1.4em;
-    text-align: center;
-    
-}
-.block-description p{
-    line-height: 1.8em;
-     width: 100%;
-     text-align: justify;
-     font-size: 1em;
-     padding-right: 1em;
-}
-.block-description a{
-    width: 100%;
-
-}
-.block-description ul{
-    gap: 1em;
     height: 70%;
-    margin-top: 1em;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
 }
-.block-description ul li{
-    border: 1px solid #008080;
+
+#internship-detail{
+    width: 80%;
+    position: relative;
+}
+
+#internship-detail .block-icon {
+    height: 20%;
+}
+
+#company-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #008080;
+
+}
+
+#internship-detail .block-description p {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+
+#internship-detail .block-description p img{
+    height: 30px;
+    object-fit: contain;
+}
+
+.block-description h2 {
+    font-size: 1.7em;
+    text-align: center;
+}
+
+.block-description p {
+    font-size: 1em;
+    line-height: 1.8em;
+    letter-spacing: 0.2px;
+    width: 100%;
+}
+
+.block-description ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    height: 60%;
+    margin-top: 1em;
+    width: 100%;
+}
+
+#requirement-detail .block-description ul li {
+    padding: 1em;
+    border: 2px solid #057777dc;
+    background-color: #00808042;
+    border-radius: 5px;
     width: 100%;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 1em;
-    height: 50px;
     gap: 1em;
-    border-radius: 5px;
-    background-color: #0080801e;
- }
- .block-description ul li img{
-    height: 30px;
-    width: 30px;
-   
-    
- }
+}
 
-#offer-map-section{
+.block-description ul li img {
+    height: 20px;
+    width: 20px;
+    object-fit: contain;
+}
+
+.block-description a {
+    width: 100%;
+    justify-self: flex-end;
+}
+
+
+#offer-map-section {
     padding-top: 1.5em;
     padding-bottom: 1em;
     box-sizing: content-box;
+    border-bottom: 2px solid black;
     height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-bottom: 2px solid black;
-    
 }
-#offer-map-section iframe{
+
+#offer-map-section iframe {
     width: 70%;
 }
-#offer-map-section a{
-   width: 70%;
-   padding: 0.7em;
-   display: flex;
-   color: var(--actionable-color);
-}
- /* #offer-review-section{
-    padding-top: 1.5em;
-    padding-bottom: 1em;
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
-    display: flex;
-    justify-content: center;
-    height: 35vh;
-    border-bottom: 2px solid black;
-    box-sizing: content-box;
-}
-.review-card{
-    height: 100%;
-    width: 25%;
-    border-radius: 5px;
-    border: 1px solid black;
-    padding: 1em;
+
+#offer-map-section a {
+    width: 70%;
+    padding: 0.7em;
     display: flex;
     justify-content: flex-start;
-    gap: 1em;
-    flex-direction: column;
-}
-.review-header{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
     align-items: center;
-    height: 30%;
+    font-size: 1.2em;
+    color: var(--actionable-color);
 }
-.review-image{
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
-    background-color: black;
-}
-.review-detail{
-    width: 70%;
-}
-.review-body p{
-    font-size: 1em;
-    line-height: 1.5em;
-} */
+
 
 /* Index main section */
 
 #index-main {
     height: 280vh;
-    
 }
 
 #hero-section {
@@ -521,7 +521,7 @@ header {
     grid-template-columns: 1fr 5fr;
     height: max-content;
     width: 100%;
-    height: 190vh;
+    height: 220vh;
 }   
 
 #fields-sidebar {
@@ -602,7 +602,7 @@ header {
     align-items: center;
     flex-direction: column;
     grid-column-start: 2;
-    height: 180vh;
+    height: 190vh;
 }
 
 
@@ -699,6 +699,12 @@ header {
     flex-wrap: wrap;
 }
 
+#offers-list a {
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+}
+
 .internship-card {
     position: relative;
     height: 30%;
@@ -713,12 +719,14 @@ header {
     display: none;
 }
 
+
+
 .offer-on-page {
     display: flex;
 }
 
 .internship-card:hover {
-    box-shadow: 5px 5px 10px 5px #b3b9e888;
+    box-shadow: 0px -2px 20px 0px #b3b9e888;
     opacity: 0.9;
 }
 
@@ -757,15 +765,6 @@ header {
     font-size: 0.8rem;
     margin-top: 0.7rem;
 }
-.detail-link{
-    position: absolute;
-    bottom: 10px;
-    padding: 0.5em;
-    color: white;
-    background-color: var(--actionable-color);
-    border: 1px solid black;
-
-}
 
 .share-offer-section {
     position: absolute;
@@ -789,6 +788,15 @@ header {
     height: 20px;
     width: 20px;
     color: black;
+}
+
+.detail-link {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    padding: 0.7em 2.5em;
+    background-color: var(--actionable-color);
+    color: white;
 }
 
 
