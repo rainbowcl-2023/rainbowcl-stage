@@ -1,0 +1,88 @@
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;;;
+    align-items: center;
+    color: white;
+}
+
+#previous-link{
+    padding: 1em;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    cursor: pointer;
+}
+
+#previous-link:hover{
+    background-color: #9082ee;
+}
+
+#previous-link img{
+    height: 20px;
+    width: 20px;
+}
+
+#cv-title{
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    gap: 0.5em;
+}
+
+#cv-title h1{
+    font-size: 1.2em;
+}
+
+#cv-title img{
+    height: 20px;
+    width: 20px;
+}
+
+#cv-download{
+    display: flex;
+    gap: 1em;
+}
+
+.action-button{
+    background-color: rgba(73, 69, 69, 0.822);
+    color: white;
+    padding: 1em;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    cursor: pointer;
+}
+
+.action-button:hover{
+    background-color: #9082ee;
+}
+
+.action-button img{
+    height: 20px;
+    width: 20px;
+}
+
+.go-button{
+    padding: 1em;
+    background-color: rgba(73, 69, 69, 0.822);
+    cursor: pointer;
+}
+
+.go-button:hover{
+    background-color: #9082ee;
+}
+
+.go-button img{
+    height: 20px;
+}
+
+.button-direction{
+    display: flex;
+    gap: 0.05em;
+    border: 1px solid white;
+}
