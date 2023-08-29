@@ -19,7 +19,9 @@ body {
     font-size: 12px;
     /* background-color: black; */
 }
-
+.middle{
+    width: 50%;
+}
 .container {
     display: flex;
     /* width: 80%; */
@@ -27,17 +29,19 @@ body {
     /* margin: auto; */
     justify-items: center;
 }
+main{
+    padding-top: 12vh;
+}   
 .row{
+    width: 100%;
     display: flex;
     flex-direction: row;
+    flex-grow: 1;
 }
 .column {
-    /* flex: 2; */
-    padding: 20px;
-    align-items: center;
-    /* justify-content: center; */
-    width: 50%;
-    /* background-color: red; */
+    padding-left: 10px;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .left-section {
@@ -279,6 +283,8 @@ body {
     border: none;
     outline: none;
     transition: 0.4s;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .active,
@@ -293,7 +299,6 @@ body {
     padding: 0 18px;
     background-color: white;
     max-height: 0;
-    overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
 
@@ -308,15 +313,17 @@ body {
 
 .active:after {
     content: "\2796";
+    display: block;
     /* Unicode character for "minus" sign (-) */
 }
-input{
+input,textarea{
     background-color: #f4f4f5;
     border-radius: 5px;
-    border: 0px;
+    border: 1px solid #ffffff;
     padding: 10px;
+    width: 100%;
 }
-input:hover{
+input:hover,textarea{
     background-color: #f5f9ff;
     border: 1px solid #547bff;
 }
@@ -332,4 +339,95 @@ input:focus{
     display: block;
     margin-top: 10px;
     font-size: 14px;
+}
+#btnImg{
+    height: 100%;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;;;
+    align-items: center;
+    color: white;
+}
+
+#previous-link{
+    padding: 1em;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    cursor: pointer;
+}
+
+#previous-link:hover{
+    background-color: #9082ee;
+}
+
+#previous-link img{
+    height: 20px;
+    width: 20px;
+}
+
+#cv-title{
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    gap: 0.5em;
+}
+
+#cv-title h1{
+    font-size: 1.2em;
+}
+
+#cv-title img{
+    height: 20px;
+    width: 20px;
+}
+
+#cv-download{
+    display: flex;
+    gap: 1em;
+}
+
+.action-button{
+    background-color: rgba(73, 69, 69, 0.822);
+    color: white;
+    padding: 1em;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    cursor: pointer;
+}
+
+.action-button:hover{
+    background-color: #9082ee;
+}
+
+.action-button img{
+    height: 20px;
+    width: 20px;
+}
+
+.go-button{
+    padding: 1em;
+    background-color: rgba(73, 69, 69, 0.822);
+    cursor: pointer;
+}
+
+.go-button:hover{
+    background-color: #9082ee;
+}
+
+.go-button img{
+    height: 20px;
+}
+
+.button-direction{
+    display: flex;
+    gap: 0.05em;
+    border: 1px solid white;
 }
