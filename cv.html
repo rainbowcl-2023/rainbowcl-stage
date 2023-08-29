@@ -15,40 +15,47 @@
 <body>
     <main class=" container">
 
-        <section class="column middle" >
-            <button class="accordion">Section 1</button>
+        <section class="column middle" id="form-cv">
+            <button class="accordion" onclick="show(pan1)">Informations personnelles</button>
             <div class="panel">
-                <p>Lorem ipsum...orem ipsum...orem ipsum...orem ipsum...orem ipsum...orem ipsum...orem ipsum...orem
-                    ipsum...orem ipsum...orem ipsum...orem ipsum...orem ipsum...orem ipsum...orem ipsum...orem
-                    ipsum...orem ipsum...orem ipsum...</p>
+                <br>
+
                 <!-- <input type="text" value="Yo"> -->
                 <section class="perso">
-                    <div class="column">
-                        <input type="button" value="">
-                        <div class="row">
-                            <div class="input column">
-                                <label for="">Prénom</label>
-                                <input type="text" name="" id="">
-                            </div>
-                            <div class="input column">
-                                <label for="">Nom de famille</label>
-                                <input type="text" name="" id="">
-                            </div>
+                    <div class="row">
+                        <div class="column">
+                            <input type="button" value="" id="btnImg">
                         </div>
-                        <div class="row">
-                            <div class="input column">
-                                <label for="">Email</label>
-                                <input type="text" name="" id="">
+                        <div class="column">
+                            <div class="row">
+                                <div class="input column">
+                                    <label for="">Prénom</label>
+                                    <input type="text" name="" id="">
+                                </div>
+                                <div class="input column">
+                                    <label for="">Nom de famille</label>
+                                    <input type="text" name="" id="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input column">
+                                    <label for="">Email</label>
+                                    <input type="text" name="" id="">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
-
+                <br>
             </div>
-
-            <button class="accordion">Section 2</button>
+            <button class="accordion">Profil</button>
             <div class="panel">
-                <p>Lorem ipsum...</p>
+                <div class="column">
+                    <div class="input column">
+                        <label for="">Prénom</label>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
             </div>
 
             <button class="accordion">Section 3</button>
@@ -56,7 +63,7 @@
                 <p>Lorem ipsum...</p>
             </div>
         </section>
-        <section class="column main-content middle">
+        <section class="column middle main-content" id="generate-cv">
             <section class="left-section ">
                 <div class="left-content">
                     <div class="profile">
@@ -67,8 +74,13 @@
                         <p class="career">Software Engineer</p>
                     </div>
                     <div class="contact-info">
-                        <h3 class="main-title">Contact Info</h3>
+                        <h3 class="main-title">Informations personnelles</h3>
                         <ul>
+                            <li>
+                                <i class="fa fa-user"></i>
+                                <p>
+                                    07661892982</p>
+                            </li>
                             <li>
                                 <i class="fa fa-phone"></i>
                                 07661892982
