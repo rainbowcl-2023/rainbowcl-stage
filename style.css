@@ -181,7 +181,7 @@ body {
     width: 100%;
     display: flex;
     padding: 0 2em;
-    justify-contegitnt: space-between;
+    justify-content: space-between;
     align-items: flex-start;
     flex-direction: row;
     height: 12vh;
