@@ -347,6 +347,84 @@ body {
 *====================================================================
 */
 
+/* profile main section */
+
+#profile-main-section{
+    height: 250vh;
+    width: 70%;
+    padding-top: 15vh;
+}
+#profile-assets{
+    height: 50vh;
+    width: 100%;
+    
+}
+#assets-image{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+#assets-image img{
+    object-fit: countain;
+    height: 90%;
+    width: 90%;
+}
+#asset-image{
+    position: absolute;
+    height: fit-content;
+    width: fit-content;
+    bottom: 0;
+    left: 0;
+    transform: translateX(30%);
+}
+#asset-image img{
+    height: 130px;
+    width: 130px;
+    border-radius: 100%;
+    background-color: red;
+    color: white;
+    object-fill: countain;
+    
+}
+#profile-information{
+    padding-top: 1.5em;
+    border-bottom: 2px solid #8880808c;
+    padding-bottom: 1em;
+    
+}
+#profile-information h1{
+    font-size: 2em;
+    
+}
+#profile-information p{
+   margin-top: 0.5em;
+   width: 70%;
+   font-size: 1em;
+   color: black;
+}
+.profile-elements{
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+    border-bottom: 2px solid #8880808c;
+}
+.profile-elements ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    list-style: disc;
+    margin-top: 0.5em;
+}
+
+.profile-elements ul li {
+    padding: 1em;
+    display: flex;
+    gap: 0.5em;
+}
+.profile-elements ul li img {
+    height: 20px;
+    width: 20px;
+    object-fit: contain;
+}
 /* offer detail main section */
 
 #offer-detail-main{
