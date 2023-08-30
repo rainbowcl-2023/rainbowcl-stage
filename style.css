@@ -979,10 +979,38 @@ body {
     border: 2px solid rgba(145, 144, 144, 0.661);
     padding: 1em 2em;
     z-index: 0;
+    position: relative;
 }
 
 #login-form {
     height: 70%;
+}
+
+.close-form-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    transition: 0.2s ease;
+}
+
+.close-form-button:hover {
+    background-color: #ffffff32;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.312);
+}
+
+.close-form-button img {
+    height: 70%;
+    width: 70%;
+    object-fit: contain;
 }
 
 .form-header {

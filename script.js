@@ -31,8 +31,8 @@ window.addEventListener('scroll', (e) => {
 })
 
 // =================================================Handles the login and signup popup
-const Connectionbuttons = document.querySelectorAll('#option-menu > button')
-Connectionbuttons.forEach( button => button.addEventListener('click', () => {
+const connectionButtons = document.querySelectorAll('#option-menu > button')
+connectionButtons.forEach( button => button.addEventListener('click', () => {
   const filter = document.querySelector(`#${button.value}-filter`)
   const form = document.querySelector(`#${button.value}-form`)
   filter.style['top'] = '0'
@@ -40,6 +40,21 @@ Connectionbuttons.forEach( button => button.addEventListener('click', () => {
   filter.style['opacity'] = 1
   form.style['z-index'] = 300
 
+}))
+
+
+// ================================================= Handles the closing of the login and signup forms
+
+const closeButtons = document.querySelectorAll('.close-form-button')
+closeButtons.forEach(button => button.addEventListener('click', () => {
+  console.log('close')
+  const filter = document.querySelector(`#${button.value}-filter`)
+  const form = document.querySelector(`#${button.value}-form`)
+  filter.style['top'] = '-100%'
+  filter.style['z-index'] = 0
+  filter.style['opacity'] = 0
+  form.style['z-index'] = 0
+  
 }))
 
 
