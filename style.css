@@ -383,7 +383,7 @@ body {
     border-radius: 100%;
     background-color: red;
     color: white;
-    object-fill: countain;
+    object-fit: contain;
     
 }
 #profile-information{
