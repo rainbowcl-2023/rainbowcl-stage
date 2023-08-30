@@ -346,7 +346,6 @@ main{
     border-radius: 6px;
 }
 
-f5f9ff
 .active:after {
     content: '\2b9D';
     /* Unicode character for "minus" sign (-) */

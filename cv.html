@@ -1,647 +1,370 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Resume Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- custom css -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+<div class="container-cv-cv">
+    <section id = "about-sc" class = "">
+        <div class = "container-cv">
+            <div class = "about-cnt">
+                <form action="" class="cv-form" id = "cv-form">
+                    <div class = "cv-form-blk">
+                        <div class = "cv-form-row-title">
+                            <h3>Informations personnelles</h3>
+                        </div>
+                        <div class = "pannel cv-form-row cv-form-row-about">
+                            <div class = "cols-2">
+                                <div class = "form-elem">
+                                    <label for = "" class = "form-label">Prénom</label>
+                                    <input name = "firstname" type = "text" class = "form-control firstname" id = "" onkeyup="generateCV()" placeholder="e.g. John">
+                                    <span class="form-text"></span>
+                                </div>
+                                <div class = "form-elem">
+                                    <label for = "" class = "form-label">Nom</label>
+                                    <input name = "lastname" type = "text" class = "form-control lastname" id = "" onkeyup="generateCV()" placeholder="e.g. Doe">
+                                    <span class="form-text"></span>
+                                </div>
+                            </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="styles_2.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+                            <div class="cols-2">
+                                <div class = "form-elem">
+                                    <label for = "" class = "form-label">Photo</label>
+                                    <input name = "image" type = "file" class = "form-control image" id = "" accept = "image/*" onchange="previewImage()">
+                                </div>
+                                <div class = "form-elem">
+                                    <label for = "" class = "form-label">Metier</label>
+                                    <input name = "designation" type = "text" class = "form-control designation" id = "" onkeyup="generateCV()" placeholder="e.g. Sr.Accountants">
+                                    <span class="form-text"></span>
+                                </div>
+                            </div>
 
-<body>
-    <header>
-        <a id="previous-link">
-            <img src="./assets/icons/arrow-previous-ltr.svg" alt="previous">
-            <span>Curriculum vitae</span>
-        </a>
-        <div id="cv-title">
-            <h1>CV sans titre</h1>
-            <img src="./assets/icons/tick-outline.svg" alt="tick">
+                            <div class = "cols-2">
+                                <div class = "form-elem">
+                                    <label for = "" class = "form-label">Addresse</label>
+                                    <input name = "address" type = "text" class = "form-control address" id = "" onkeyup="generateCV()" placeholder="e.g. Lake Street-23">
+                                    <span class="form-text"></span>
+                                </div>
+                                <div class = "form-elem">
+                                    <label for = "" class = "form-label">Email</label>
+                                    <input name = "email" type = "text" class = "form-control email" id = "" onkeyup="generateCV()" placeholder="e.g. johndoe@gmail.com">
+                                    <span class="form-text"></span>
+                                </div>
+                            </div>
+
+                            <div class = "cols-2">
+                                <div class = "form-elem">
+                                    <label for = "" class = "form-label">Téléphone</label>
+                                    <input name = "phoneno" type = "text" class = "form-control phoneno" id = "" onkeyup="generateCV()" placeholder="e.g. 456-768-798, 567.654.002">
+                                    <span class="form-text"></span>
+                                </div>
+                                <div class = "form-elem">
+                                    <label for = "" class = "form-label">Sommaire</label>
+                                    <input name = "summary" type = "text" class = "form-control summary" id = "" onkeyup="generateCV()" placeholder="e.g. Doe">
+                                    <span class="form-text"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cv-form-blk">
+                        <div class = "cv-form-row-title">
+                            <h3>réalisation</h3>
+                        </div>
+
+                        <div class = "pannel row-separator repeater">
+                            <div class = "repeater" data-repeater-list = "group-a">
+                                <div data-repeater-item>
+                                    <div class = "cv-form-row cv-form-row-achievement">
+                                        <div class = "cols-2">
+                                            <div class = "form-elem">
+                                                <label for = "" class = "form-label">Title</label>
+                                                <input name = "achieve_title" type = "text" class = "form-control achieve_title" id = "" onkeyup="generateCV()" placeholder="e.g. johndoe@gmail.com">
+                                                <span class="form-text"></span>
+                                            </div>
+                                            <div class = "form-elem">
+                                                <label for = "" class = "form-label">Description</label>
+                                                <input name = "achieve_description" type = "text" class = "form-control achieve_description" id = "" onkeyup="generateCV()" placeholder="e.g. johndoe@gmail.com">
+                                                <span class="form-text"></span>
+                                            </div>
+                                        </div>
+                                        <button data-repeater-delete type = "button" class = "repeater-remove-btn">-</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type = "button" data-repeater-create value = "Add" class = "repeater-add-btn">+</button>
+                        </div>
+                    </div>
+
+                    <div class="cv-form-blk">
+                        <div class = "cv-form-row-title">
+                            <h3>experience</h3>
+                        </div>
+
+                        <div class = "pannel row-separator repeater">
+                            <div class = "repeater" data-repeater-list = "group-b">
+                                <div data-repeater-item>
+                                    <div class = "cv-form-row cv-form-row-experience">
+                                        <div class = "cols-2">
+                                            <div class = "form-elem">
+                                                <label for = "" class = "form-label">Titre</label>
+                                                <input name = "exp_title" type = "text" class = "form-control exp_title" id = "" onkeyup="generateCV()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                            <div class = "form-elem">
+                                                <label for = "" class = "form-label">Entreprise</label>
+                                                <input name = "exp_organization" type = "text" class = "form-control exp_organization" id = "" onkeyup="generateCV()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class = "cols-2">
+                                            <div class = "form-elem">
+                                                <label for = "" class = "form-label">Localisation</label>
+                                                <input name = "exp_location" type = "text" class = "form-control exp_location" id = "" onkeyup="generateCV()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                            <div class = "form-elem">
+                                                <label for = "" class = "form-label">Description</label>
+                                                <input name = "exp_description" type = "text" class = "form-control exp_description" id = "" onkeyup="generateCV()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class = "cols-2">
+                                            <div class = "form-elem">
+                                                <label for = "" class = "form-label">Date début</label>
+                                                <input name = "exp_start_date" type = "date" class = "form-control exp_start_date" id = "" onkeyup="generateCV()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                            <div class = "form-elem">
+                                                <label for = "" class = "form-label">Date fin</label>
+                                                <input name = "exp_end_date" type = "date" class = "form-control exp_end_date" id = "" onkeyup="generateCV()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                        </div>
+                                        <button data-repeater-delete type = "button" class = "repeater-remove-btn">-</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type = "button" data-repeater-create value = "Add" class = "repeater-add-btn">+</button>
+                        </div>
+                    </div>
+
+                    <div class="cv-form-blk">
+                        <div class = "cv-form-row-title">
+                            <h3>education</h3>
+                        </div>
+
+                        <div class = "pannel row-separator repeater">
+                            <div class = "repeater" data-repeater-list = "group-c">
+                                <div data-repeater-item>
+                                    <div class = "cv-form-row cv-form-row-experience">
+                                        <div class = "cols-2">
+                                            <div class = "form-elem">
+                                                <label for = "" class = "form-label">Etablisement</label>
+                                                <input name = "edu_school" type = "text" class = "form-control edu_school" id = "" onkeyup="generateCV()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                            <div class = "form-elem">
+                                                <label for = "" class = "form-label">Niveau</label>
+                                                <input name = "edu_degree" type = "text" class = "form-control edu_degree" id = "" onkeyup="generateCV()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class = "cols-2">
+                                            <div class = "form-elem">
+                                                <label for = "" class = "form-label">Localisation</label>
+                                                <input name = "edu_city" type = "text" class = "form-control edu_city" id = "" onkeyup="generateCV()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                            <div class = "form-elem">
+                                                <label for = "" class = "form-label">Description</label>
+                                                <input name = "edu_description" type = "text" class = "form-control edu_description" id = "" onkeyup="generateCV()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class = "cols-2">
+                                            <div class = "form-elem">
+                                                <label for = "" class = "form-label">Date début</label>
+                                                <input name = "edu_start_date" type = "date" class = "form-control edu_start_date" id = "" onkeyup="generateCV()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                            <div class = "form-elem">
+                                                <label for = "" class = "form-label">Date fin</label>
+                                                <input name = "edu_graduation_date" type = "date" class = "form-control edu_graduation_date" id = "" onkeyup="generateCV()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                        </div>
+                                        <button data-repeater-delete type = "button" class = "repeater-remove-btn">-</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type = "button" data-repeater-create value = "Add" class = "repeater-add-btn">+</button>
+                        </div>
+                    </div>
+
+                    <div class="cv-form-blk">
+                        <div class = "cv-form-row-title">
+                            <h3>projets</h3>
+                        </div>
+
+                        <div class = "pannel row-separator repeater">
+                            <div class = "repeater" data-repeater-list = "group-d">
+                                <div data-repeater-item>
+                                    <div class = "cv-form-row cv-form-row-experience">
+                                        <div class = "cols-2">
+                                            <div class = "form-elem">
+                                                <label for = "" class = "form-label">Nom du projet</label>
+                                                <input name = "proj_title" type = "text" class = "form-control proj_title" id = "" onkeyup="generateCV()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                            <div class = "form-elem">
+                                                <label for = "" class = "form-label">Lien du projet</label>
+                                                <input name = "proj_link" type = "text" class = "form-control proj_link" id = "" onkeyup="generateCV()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="cols-1">
+                                            <div class = "form-elem">
+                                                <label for = "" class = "form-label">Description</label>
+                                                <input name = "proj_description" type = "text" class = "form-control proj_description" id = "" onkeyup="generateCV()">
+                                                <span class="form-text"></span>
+                                            </div></div>
+                                        <button data-repeater-delete type = "button" class = "repeater-remove-btn">-</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type = "button" data-repeater-create value = "Add" class = "repeater-add-btn">+</button>
+                        </div>
+                    </div>
+
+                    <div class="cv-form-blk">
+                        <div class = "cv-form-row-title">
+                            <h3>compétences</h3>
+                        </div>
+
+                        <div class = "pannel row-separator repeater">
+                            <div class = "repeater" data-repeater-list = "group-e">
+                                <div data-repeater-item>
+                                    <div class = "cv-form-row cv-form-row-skills">
+                                        <div class = "form-elem">
+                                            <label for = "" class = "form-label">compétences</label>
+                                            <input name = "skill" type = "text" class = "form-control skill" id = "" onkeyup="generateCV()">
+                                            <span class="form-text"></span>
+                                        </div>
+                                        
+                                        <button data-repeater-delete type = "button" class = "repeater-remove-btn">-</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type = "button" data-repeater-create value = "Add" class = "repeater-add-btn">+</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div id="cv-download">
-            <div class="button-direction">
-                <button class="go-button">
-                    <img src="./assets/icons/arrow-go-back-line.svg" alt="go-back">
-                </button>
-                <button class="go-button">
-                    <img src="./assets/icons/go-on.svg" alt="go-on">
-                </button>
+    </section>
+
+    <section id = "preview-sc" class = "print_area">
+        <div class = "container-cv">
+            <div class = "preview-cnt">
+                <div class = "preview-cnt-l bg-green text-white">
+                    <div class = "preview-blk">
+                        <div class = "preview-image">
+                            <img src = "" alt = "" id = "image_dsp"> 
+                        </div>
+                        <div class = "preview-item preview-item-name">
+                            <span class = "preview-item-val fw-6" id = "fullname_dsp"></span>
+                        </div>
+                        <div class = "preview-item">
+                            <span class = "preview-item-val text-uppercase fw-6 ls-1" id = "designation_dsp"></span>
+                        </div>
+                    </div>
+
+                    <div class = "preview-blk">
+                        <div class = "preview-blk-title">
+                            <h3>à propos</h3>
+                        </div>
+                        <div class = "preview-blk-list">
+                            <div class = "preview-item">
+                                <span class = "preview-item-val" id = "phoneno_dsp"></span>
+                            </div>
+                            <div class = "preview-item">
+                                <span class = "preview-item-val" id = "email_dsp"></span>
+                            </div>
+                            <div class = "preview-item">
+                                <span class = "preview-item-val" id = "address_dsp"></span>
+                            </div>
+                            <div class = "preview-item">
+                                <span class = "preview-item-val" id = "summary_dsp"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "preview-blk">
+                        <div class = "preview-blk-title">
+                            <h3>expériences</h3>
+                        </div>
+                        <div class = "skills-items preview-blk-list" id = "skills_dsp">
+                            <!-- skills list here -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "preview-cnt-r bg-white">
+                    <div class = "preview-blk">
+                        <div class = "preview-blk-title">
+                            <h3>réalisation</h3>
+                        </div>
+                        <div class = "achievements-items preview-blk-list" id = "achievements_dsp"></div>
+                    </div>
+
+                    <div class = "preview-blk">
+                        <div class = "preview-blk-title">
+                            <h3>educations</h3>
+                        </div>
+                        <div class = "educations-items preview-blk-list" id = "educations_dsp"></div>
+                    </div>
+
+                    <div class = "preview-blk">
+                        <div class = "preview-blk-title">
+                            <h3>experiences</h3>
+                        </div>
+                        <div class = "experiences-items preview-blk-list" id = "experiences_dsp"></div>
+                    </div>
+
+                    <div class = "preview-blk">
+                        <div class = "preview-blk-title">
+                            <h3>projets</h3>
+                        </div>
+                        <div class = "projects-items preview-blk-list" id = "projects_dsp"></div>
+                    </div>
+                </div>
             </div>
-            <select name="" id="">
-                <option value="">Francais</option>
-                <option value="">Anglais</option>
-                <option value="">Espagnol</option>
-                <option value="">Allemand</option>
-            </select>
-            <button class="action-button">
-                <img src="./assets/icons/import.svg" alt="import">
-                <span>Importer</span>
-            </button>
-            <button class="action-button">
-                <img src="./assets/icons/sharp-download.svg" alt="download">
-                <span>Télécharger</span>
-            </button>
         </div>
-    </header>
-    <main class=" container">
-        <section class="column middle" id="form-cv">
-            <button class="accordion">Informations Personnelles</button>
-            <div class="panel" id="inf1">
-                <br></br>
-                <!-- <input type="text" value="Yo"> -->
-                <section class="perso">
-                    <div class="column">
-                        <div class="row">
-                            <div class="column">
-                                <input type="button" value="" id="btnImg">
-                            </div>
-                            <div class="column">
-                                <div class="row">
-                                    <div class="input column">
-                                        <label for="">Prénom</label>
-                                        <input type="text" name="" id="">
-                                    </div>
-                                    <div class="input column">
-                                        <label for="">Nom de famille</label>
-                                        <input type="text" name="" id="">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input column">
-                                        <label for="">Email</label>
-                                        <input type="text" name="" id="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="input column">
-                                <label for="">Titre du profil</label>
-                                <input type="text" name="" id="">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input column">
-                                <label for="">Numéro de téléphone</label>
-                                <input type="text" name="" id="">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input column">
-                                <label for="">Adresse</label>
-                                <input type="text" name="" id="">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="row">
-                                <div class="input column">
-                                    <label for="">Code postal</label>
-                                    <input type="text" name="" id="">
-                                </div>
-                                <div class="input column">
-                                    <label for="">Ville</label>
-                                    <input type="text" name="" id="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <button class="accordion" id="inf1">Profil</button>
-            <div class="panel">
-                <div class="input column">
-                    <label for="">Description</label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                </div>
-            </div>
-            <button class="accordion" id="inf1">Formation</button>
-            <div class="panel">
-                <div class="input column">
-                    <label for="">Formation</label>
-                    <input type="text" name="" id="">
-                </div>
-                <div>
-                    <div class="row">
-                        <div class="input column">
-                            <label for="">Etablissement</label>
-                            <input type="text" name="" id="">
-                        </div>
-                        <div class="input column">
-                            <label for="">Ville</label>
-                            <input type="text" name="" id="">
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="row">
-                        <div class="input column">
-                            <label for="">Date de début</label>
-                            <select name="" id="">
-                                <option value="">Mois</option>
-                                <option value="">Janvier</option>
-                                <option value="">Février</option>
-                                <option value="">Mars</option>
-                                <option value="">Avril</option>
-                                <option value="">Mai</option>
-                                <option value="">Juin</option>
-                                <option value="">Juillet</option>
-                                <option value="">Aout</option>
-                                <option value="">Septembre</option>
-                                <option value="">Octobre</option>
-                                <option value="">Novembre</option>
-                                <option value="">Décembre</option>
-                            </select>
-                        </div>
-                        <div class="input column">
-                            <label for="">.</label>
-                            <select name="" id="">
-                                <option value="">Année</option>
-                                <option value="">2023</option>
-                                <option value="">2022</option>
-                                <option value="">2021</option>
-                                <option value="">2020</option>
-                                <option value="">2019</option>
-                                <option value="">2018</option>
-                                <option value="">2017</option>
-                                <option value="">2016</option>
-                                <option value="">2015</option>
-                                <option value="">2014</option>
-                                <option value="">2013</option>
-                                <option value="">2012</option>
-                            </select>
-                        </div>
-                        <div class="input column">
-                            <div class="input column">
-                                <label for="">Date de fin</label>
-                                <select name="" id="">
-                                    <option value="">Mois</option>
-                                    <option value="">Janvier</option>
-                                    <option value="">Février</option>
-                                    <option value="">Mars</option>
-                                    <option value="">Avril</option>
-                                    <option value="">Mai</option>
-                                    <option value="">Juin</option>
-                                    <option value="">Juillet</option>
-                                    <option value="">Aout</option>
-                                    <option value="">Septembre</option>
-                                    <option value="">Octobre</option>
-                                    <option value="">Novembre</option>
-                                    <option value="">Décembre</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="input column">
-                            <label for="">.</label>
-                            <select name="" id="">
-                                <option value="">Année</option>
-                                <option value="">2023</option>
-                                <option value="">2022</option>
-                                <option value="">2021</option>
-                                <option value="">2020</option>
-                                <option value="">2019</option>
-                                <option value="">2018</option>
-                                <option value="">2017</option>
-                                <option value="">2016</option>
-                                <option value="">2015</option>
-                                <option value="">2014</option>
-                                <option value="">2013</option>
-                                <option value="">2012</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="input column">
-                        <label for="">Description</label>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                    </div>
-                </div>
-            </div>
-            <button class="accordion" id="inf1">Expérience professionnelle</button>
-            <div class="panel">
-                <div class="input column">
-                    <label for="">Poste</label>
-                    <input type="text" name="" id="">
-                </div>
-                <div>
-                    <div class="row">
-                        <div class="input column">
-                            <label for="">Employeur</label>
-                            <input type="text" name="" id="">
-                        </div>
-                        <div class="input column">
-                            <label for="">Ville</label>
-                            <input type="text" name="" id="">
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="row">
-                        <div class="input column">
-                            <label for="">Date de début</label>
-                            <select name="" id="">
-                                <option value="">Mois</option>
-                                <option value="">Janvier</option>
-                                <option value="">Février</option>
-                                <option value="">Mars</option>
-                                <option value="">Avril</option>
-                                <option value="">Mai</option>
-                                <option value="">Juin</option>
-                                <option value="">Juillet</option>
-                                <option value="">Aout</option>
-                                <option value="">Septembre</option>
-                                <option value="">Octobre</option>
-                                <option value="">Novembre</option>
-                                <option value="">Décembre</option>
-                            </select>
-                        </div>
-                        <div class="input column">
-                            <label for="">.</label>
-                            <select name="" id="">
-                                <option value="">Année</option>
-                                <option value="">2023</option>
-                                <option value="">2022</option>
-                                <option value="">2021</option>
-                                <option value="">2020</option>
-                                <option value="">2019</option>
-                                <option value="">2018</option>
-                                <option value="">2017</option>
-                                <option value="">2016</option>
-                                <option value="">2015</option>
-                                <option value="">2014</option>
-                                <option value="">2013</option>
-                                <option value="">2012</option>
-                            </select>
-                        </div>
-                        <div class="input column">
-                            <div class="input column">
-                                <label for="">Date de fin</label>
-                                <select name="" id="">
-                                    <option value="">Mois</option>
-                                    <option value="">Janvier</option>
-                                    <option value="">Février</option>
-                                    <option value="">Mars</option>
-                                    <option value="">Avril</option>
-                                    <option value="">Mai</option>
-                                    <option value="">Juin</option>
-                                    <option value="">Juillet</option>
-                                    <option value="">Aout</option>
-                                    <option value="">Septembre</option>
-                                    <option value="">Octobre</option>
-                                    <option value="">Novembre</option>
-                                    <option value="">Décembre</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="input column">
-                            <label for="">.</label>
-                            <select name="" id="">
-                                <option value="">Année</option>
-                                <option value="">2023</option>
-                                <option value="">2022</option>
-                                <option value="">2021</option>
-                                <option value="">2020</option>
-                                <option value="">2019</option>
-                                <option value="">2018</option>
-                                <option value="">2017</option>
-                                <option value="">2016</option>
-                                <option value="">2015</option>
-                                <option value="">2014</option>
-                                <option value="">2013</option>
-                                <option value="">2012</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="input column">
-                        <label for="">Description</label>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                    </div>
-                </div>
-            </div>
-            <button class="accordion" id="inf1">Compétence</button>
-            <div class="panel">
-                <div class="input column">
-                    <label for="">Compétence</label>
-                    <input type="text" name="" id="">
-                </div>
-                <div class="input column">
-                    <label for="">Niveau</label>
-                    <div>
-                        <div class="row">
-                            <div class="input column">
-                                <input type="range" name="" id="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="button-add-section"> Ajouter une Compétence </button>
+    </section>
+</div>
 
-            </div>
-        </section>
-        <section class="column middle main-content" id="generate-cv">
-            <section class="left-section ">
-                <div class="left-content">
-                    <div class="profile">
-                        <div class="image">
-                            <img src="assets/college project-amico.svg" alt="">
-                        </div>
-                        <h2 class="name">Lorem Dola Ipsum</h2>
-                        <p class="career">Software Engineer</p>
-                    </div>
-                    <div class="contact-info">
-                        <h3 class="main-title">Informations personnelles</h3>
-                        <ul>
-                            <li>
-                                <i class="fa fa-user"></i>
-                                <p>
-                                    07661892982</p>
-                            </li>
-                            <li>
-                                <i class="fa fa-phone"></i>
-                                07661892982
-                            </li>
-                            <li>
-                                <i class="fa fa-fax"></i>
-                                loremipsum@gmail.com
-                            </li>
-                            <li>
-                                <i class="fa fa-globe"></i>
-                                www.loremipsum.com
-                            </li>
-                            <li>
-                                <i class="fa fa-facebook"></i>
-                                www.facebook.com/lorem
-                            </li>
-                            <li>
-                                <i class="fa fa-instagram"></i>
-                                @loremipsum
-                            </li>
-                            <li>
-                                <i class="fa fa-map-marker"></i>
-                                37 Pramount St, London
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="skills-section">
-                        <h3 class="main-title">Skills</h3>
-                        <ul>
-                            <li>
-                                <p class="skill-title">Javascript</p>
-                                <div class="progress-bar">
-                                    <div class="progress js-progress"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="skill-title">Photoshop</p>
-                                <div class="progress-bar">
-                                    <div class="progress ps-progress"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="skill-title">Java</p>
-                                <div class="progress-bar">
-                                    <div class="progress j-progress"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="skill-title">C++</p>
-                                <div class="progress-bar">
-                                    <div class="progress c-progress"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="skill-title">Ruby</p>
-                                <div class="progress-bar">
-                                    <div class="progress ps-progress"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="skill-title">Node js</p>
-                                <div class="progress-bar">
-                                    <div class="progress n-progress"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="skill-title">html/css</p>
-                                <div class="progress-bar">
-                                    <div class="progress ps-progress"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="skill-title">illustrator</p>
-                                <div class="progress-bar">
-                                    <div class="progress ps-progress"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="skill-title">Wordpress</p>
-                                <div class="progress-bar">
-                                    <div class="progress ps-progress"></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="references-section">
-                        <h3 class="main-title">References</h3>
-                        <div class="referee">
-                            <h6 class="sub-title">Michael Bowen</h6>
-                            <p class="sub-para">Product Manager</p>
-                            <ul>
-                                <li>
-                                    <i class="fa fa-phone"></i>
-                                    07661892982
-                                </li>
-                                <li>
-                                    <i class="fa fa-fax"></i>
-                                    loremipsum@gmail.com
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="referee">
-                            <h6 class="sub-title">Joseph Kumar</h6>
-                            <p class="sub-para">Senior Developer</p>
-                            <ul>
-                                <li>
-                                    <i class="fa fa-phone"></i>
-                                    07661892982
-                                </li>
-                                <li>
-                                    <i class="fa fa-fax"></i>
-                                    loremipsum@gmail.com
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="referee">
-                            <h6 class="sub-title">Rick Ross</h6>
-                            <p class="sub-para">Product Manager</p>
-                            <ul>
-                                <li>
-                                    <i class="fa fa-phone"></i>
-                                    07661892982
-                                </li>
-                                <li>
-                                    <i class="fa fa-fax"></i>
-                                    loremipsum@gmail.com
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="right-section">
-                <div class="right-main-content">
-                    <section class="about sect">
-                        <h2 class="right-title">About Me</h2>
-                        <p class="para">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam molestias facilis ullam
-                            dolorum, reprehenderit dolorem accusantium sit quo
-                            dolore nostrum assumenda obcaecati animi commodi nobis labore exercitationem corporis esse
-                            eveniet optio laudantium molestiae maiores pariatur nisi cumque.
-                            Distinctio et, totam, dicta autem nostrum doloribus ipsam vel rerum, molestiae soluta
-                            laboriosam. <br>
-                            <br>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto iusto porro suscipit.
-                            Nihil blanditiis cum voluptates odio recusandae deleniti, nulla repudiandae aliquam adipisci
-                            iusto reiciendis sequi labore quos ratione accusamus consectetur,
-                            libero ex assumenda pariatur commodi animi nobis, dolore id.
-                        </p>
-                    </section>
+        
 
-                    <section class="experince sect">
-                        <h2 class="right-title">Experience</h2>
-                        <div class="timeline">
-                            <div class="left-tl-content">
-                                <h5 class="tl-title">Microsoft</h5>
-                                <p class="para">2017 - 2019</p>
-                            </div>
-                            <div class="right-tl-content">
-                                <div class="tl-content">
-                                    <h5 class="tl-title-2">Junior Developer</h5>
-                                    <p class="para">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias cupiditate
-                                        vitae
-                                        voluptatem deleniti,
-                                        laboriosam odio nobis quae fugit facilis quo.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline">
-                            <div class="left-tl-content">
-                                <h5 class="tl-title">Google Inc</h5>
-                                <p class="para">2019 - 2020</p>
-                            </div>
-                            <div class="right-tl-content">
-                                <div class="tl-content">
-                                    <h5 class="tl-title-2">Lead Web developer</h5>
-                                    <p class="para">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias cupiditate
-                                        vitae
-                                        voluptatem deleniti,
-                                        laboriosam odio nobis quae fugit facilis quo.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline">
-                            <div class="left-tl-content">
-                                <h5 class="tl-title">Google Inc</h5>
-                                <p class="para">2019 - 2020</p>
-                            </div>
-                            <div class="right-tl-content">
-                                <div class="tl-content">
-                                    <h5 class="tl-title-2">Lead Web developer</h5>
-                                    <p class="para">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias cupiditate
-                                        vitae
-                                        voluptatem deleniti,
-                                        laboriosam odio nobis quae fugit facilis quo.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline">
-                            <div class="left-tl-content">
-                                <h5 class="tl-title">Apple</h5>
-                                <p class="para">2020 - Present</p>
-                            </div>
-                            <div class="right-tl-content">
-                                <div class="tl-content">
-                                    <h5 class="tl-title-2">Senior Developer</h5>
-                                    <p class="para">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias cupiditate
-                                        vitae
-                                        voluptatem deleniti,
-                                        laboriosam odio nobis quae fugit facilis quo.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="education sect">
-                        <h2 class="right-title">education</h2>
-                        <div class="timeline">
-                            <div class="left-tl-content">
-                                <h5 class="tl-title">Cheney School</h5>
-                                <p class="para">2015 - 2016</p>
-                            </div>
-                            <div class="right-tl-content">
-                                <div class="tl-content">
-                                    <h5 class="tl-title-2">Gcse's</h5>
-                                    <p class="para">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias cupiditate
-                                        vitae
-                                        voluptatem deleniti,
-                                        laboriosam odio nobis quae fugit facilis quo.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline">
-                            <div class="left-tl-content">
-                                <h5 class="tl-title">Cheney School</h5>
-                                <p class="para">2016 - 2018</p>
-                            </div>
-                            <div class="right-tl-content">
-                                <div class="tl-content">
-                                    <h5 class="tl-title-2">A - Levels</h5>
-                                    <p class="para">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias cupiditate
-                                        vitae
-                                        voluptatem deleniti,
-                                        laboriosam odio nobis quae fugit facilis quo.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline">
-                            <div class="left-tl-content">
-                                <h5 class="tl-title">University of Sussex</h5>
-                                <p class="para">2018 - Present</p>
-                            </div>
-                            <div class="right-tl-content">
-                                <div class="tl-content">
-                                    <h5 class="tl-title-2">Computer Science</h5>
-                                    <p class="para">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias cupiditate
-                                        vitae
-                                        voluptatem deleniti,
-                                        laboriosam odio nobis quae fugit facilis quo.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </section>
-        </section>
-    </main>
-
-    <script src="script_2.js"></script>
-</body>
-
+        <!-- jquery cdn -->
+        <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+        <!-- jquery repeater cdn -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.repeater/1.2.1/jquery.repeater.js" integrity="sha512-bZAXvpVfp1+9AUHQzekEZaXclsgSlAeEnMJ6LfFAvjqYUVZfcuVXeQoN5LhD7Uw0Jy4NCY9q3kbdEXbwhZUmUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- custom js -->
+        <script src = "script.js"></script>
+        <!-- app js -->
+        <script src="app.js"></script>
+    </body>
 </html>
