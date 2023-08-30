@@ -12,5 +12,22 @@ for (i = 0; i < acc.length; i++) {
       panel.style.maxHeight = panel.scrollHeight + "px";
     }
   });
+
+  function updateParagraphText(input, paragraph) {
+    // Récupérer la valeur de l'input
+    var input = document.getElementById(input);
+    var inputValue = input.value;
+    // Mettre à jour le texte du paragraphe
+    var paragraphs = document.getElementById(paragraph);
+    
+    paragraphs.textContent = inputValue;
+    
+    if (input.value === '') {
+      document.querySelector('.'+paragraph).style.display = 'none';
+    } else {
+      document.querySelector('.'+paragraph).style.display = 'flex';
+    }
+  }
+
 }
 
