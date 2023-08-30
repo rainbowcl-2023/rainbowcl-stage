@@ -350,18 +350,18 @@ main{
     content: '\2b9D';
     /* Unicode character for "minus" sign (-) */
 }
-input,textarea{
+input,textarea,select{
     background-color: #f4f4f5;
     border-radius: 5px;
     border: 1px solid #ffffff;
     padding: 10px;
     width: 100%;
 }
-input:hover,textarea:hover{
+input:hover,textarea:hover,select:hover{
     background-color: #f5f9ff;
     border: 1px solid #547bff;
 }
-input:focus,textarea:focus{
+input:focus,textarea:focus,select:focus{
     background-color: #f5f9ff;
     border: 1px solid #547bff;
     outline: none;
@@ -376,6 +376,15 @@ input:focus,textarea:focus{
 }
 #btnImg{
     height: 100%;
+}
+.button-add-section::before{
+    content: '+';
+    border: 1px solid black;
+    font-size: 13px;
+    color: #777;
+    float: left;
+    padding: 6px 8px;
+    border-radius: 6px;
 }
 header{
     display: flex;
