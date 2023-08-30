@@ -92,7 +92,8 @@ body {
 *====================================================================
 */
 
-#index-header {
+#index-header,
+#offer-detail-header {
     position: fixed;
     width: 100%;
     display: flex;
