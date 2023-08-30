@@ -102,11 +102,15 @@
                         </div>
                         <div class="form-input">
                             <input type="password" required>
-                            <label for="">Mot de passe</label>
+                            <label for="">Etablissement</label>
                         </div>
                         <div class="form-input">
                             <input type="password" required>
-                            <label for="">Repeter le mot de passe</label>
+                            <label for="">Niveau</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="tel" required>
+                            <label for="">Numero de telephone</label>
                         </div>
                         <p>se connecter avec </p>
                         <div id="social-connect">
@@ -119,35 +123,41 @@
                         </div>
                     </div>
                     <div id="block-2" class="block">
-                        <div class="picture-input">
-                            <img id="profile-display" src="assets/icons/user.svg" alt="">
-                        </div>
                         <div class="form-input">
                             <input type="text" required>
                             <label for="">Nom d'utilisateur</label>
                         </div>
                         <div class="form-input">
-                            <input type="password" required>
-                            <label for="">Etablissement</label>
-                        </div>
-                        <div class="form-input">
-                            <input type="password" required>
-                            <label for="">Niveau</label>
-                        </div>
-                        <div class="form-input">
                             <input type="number" required>
                             <label for="">Matricule</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="password" required>
+                            <label for="">Mot de passe</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="password" required>
+                            <label for="">Repeter le mot de passe</label>
                         </div>
                         <div class="check-input">
                             <input type="checkbox">
                             <label for="">J'accepte les conditions de confidentialite</label>
                         </div>
+                        <p>se connecter avec </p>
+                        <div id="social-connect">
+                            <a class="connect-option" href="#">
+                                <img src="assets/icons/google.svg" alt="">
+                            </a>
+                            <a class="connect-option" href="#">
+                                <img src="assets/icons/facebook.svg" alt="">
+                            </a>
+                        </div>
                     </div>
 
                 </div>
                 <div class="form-action">
-                    <button id="follow-button" type="button" onclick="handleNextBlock()">suivant >></button>
-                    <button id="signup-button" type="submit">S'inscrire</button>
+                    <button id="follow-button" type="button">suivant >></button>
+                    <button id="signup-button" type="submit" disabled>S'inscrire</button>
                     <div class="form-input">
                         <p>deja un compte ? <a href="login.html">connectez vous maintenant</a></p>
                     </div>
