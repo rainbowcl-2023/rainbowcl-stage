@@ -207,7 +207,6 @@ const displayCV = (userData) => {
     if(userData.address.length!=0){
         addressDsp.innerHTML = '<img class=\'icon\' src="assets/icons/address-marker.svg" alt="adress"></img>' + userData.address;
     }
-    addressDsp.innerHTML = userData.address;
     designationDsp.innerHTML = userData.designation;
     summaryDsp.innerHTML = userData.summary;
     showListData(userData.projects, projectsDsp);
