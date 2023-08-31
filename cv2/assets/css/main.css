@@ -109,15 +109,12 @@ a{
 .ls-1{letter-spacing: 1px;}
 .ls-2{letter-spacing: 2px;}
 
-.container-cv{
+.container{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.6rem;
 }
-.icon{
-    width: 1rem;
-    height: 1rem;
-}
+
 /* bars button */
 .bars{
     display: flex;
@@ -177,9 +174,14 @@ a{
 }
 
 /* navbar part */
-zz
+.navbar{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 8px;
+}
 
-.navbar .container-cv{
+.navbar .container{
     width: 100%;
 }
 
@@ -337,28 +339,24 @@ zz
 
 
 /* resume page */
-.container-cv-cv{
+.container-cv{
     display: flex;
-    height: 100vh;
+    width: 100%;
     position: fixed;
     top: 12vh;
-    /* width: 80%; */
-    justify-content: center;
-    /* margin: auto; */
-    justify-items: center;
-    width: 100%;
-    padding-bottom: 12vh;
+    padding-bottom: 10vh;
+    height: 100vh;
 }
 #about-sc{
+    height: 100%;
     padding: 64px 120px;
     width: 50%;
-    height: 100%;
     overflow-y: auto;
 }
 #preview-sc{
-    padding: 64px 0px;
-    width: 50%;
     height: 100%;
+    width: 50%;
+    padding: 64px 0px;
     overflow-y: auto;
     background-color: #f3f2ef;
 }
@@ -372,15 +370,11 @@ zz
     border-width: 0px 0px 1px 0px;
     outline: none;
     transition: 0.4s;
+    font-weight: bold;
+    font-size: 16px;
     padding: 18px 0px;
 }
 
-.cv-form-row-title h3{
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-size: 1.7rem;
-}
 .cv-form-row-title h3:after {
     content: '\2b9f';
     border: 1px solid black;
@@ -399,24 +393,31 @@ zz
     padding: 6px 8px;
     border-radius: 6px;
 }
-
-.active h3:after {
-    content: '\2b9D';
-    /* Unicode character for "minus" sign (-) */
+.active h3::after{
+    content: "\2b9d";
+}
+.cv-form-row-title h3{
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 1.7rem;
 }
 .cv-form-blk{
     margin: 3rem 0;
 }
 .cv-form-row{
     padding: 3rem 2rem 0 2rem;
+    /*border: 1px solid rgba(0, 0, 0, 0.08);*/
     margin-bottom: 1rem;
     position: relative;
 }
-.pannel{
+
+.panel{
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.3s ease-out;
 }
+
 textarea{
     resize: none;
 }
@@ -438,21 +439,16 @@ textarea{
     padding: 10px;
     width: 100%;
 }
-
 .form-control:hover{
     background-color: #f5f9ff;
     border: 1px solid #547bff;
 }
-
 .form-control:focus{
     background-color: #f5f9ff;
     border: 1px solid #547bff;
     outline: none;
 }
 
-.form-control:focus{
-    border-color: rgba(0, 0, 0, 0.3);
-}
 .form-text{
     color: #ca0b00;
     font-size: 12px;
@@ -640,7 +636,7 @@ textarea{
     }
 
     .print_area{
-        /* width: 100%; */
+        width: 100%;
         position: absolute;
         left: 0;
         top: 0;

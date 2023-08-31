@@ -1,5 +1,5 @@
 // regex for validation
-const strRegex = /^[a-zA-Z\s]*$/; // containing only letters
+const strRegex =  /^[a-zA-Z\s]*$/; // containing only letters
 const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
 /* supports following number formats - (123) 456-7890, (123)456-7890, 123-456-7890, 123.456.7890, 1234567890, +31636363634, 075-63546725 */
@@ -17,7 +17,7 @@ const validType = {
 
 // user inputs elements
 let firstnameElem = mainForm.firstname,
-    // middlenameElem = mainForm.middlename,
+    middlenameElem = mainForm.middlename,
     lastnameElem = mainForm.lastname,
     imageElem = mainForm.image,
     designationElem = mainForm.designation,
@@ -37,8 +37,6 @@ let nameDsp = document.getElementById('fullname_dsp'),
     projectsDsp = document.getElementById('projects_dsp'),
     achievementsDsp = document.getElementById('achievements_dsp'),
     skillsDsp = document.getElementById('skills_dsp'),
-    languageDsp = document.getElementById('languages_dsp'),
-    loisirsDsp = document.getElementById('loisirs_dsp'),
     educationsDsp = document.getElementById('educations_dsp'),
     experiencesDsp = document.getElementById('experiences_dsp');
 
@@ -49,10 +47,10 @@ const fetchValues = (attrs, ...nodeLists) => {
     let tempDataArr = [];
 
     // first loop deals with the no of repeaters value
-    for (let i = 0; i < elemsDataCount; i++) {
+    for(let i = 0; i < elemsDataCount; i++){
         let dataObj = {}; // creating an empty object to fill the data
         // second loop fetches the data for each repeaters value or attributes 
-        for (let j = 0; j < elemsAttrsCount; j++) {
+        for(let j = 0; j < elemsAttrsCount; j++){
             // setting the key name for the object and fill it with data
             dataObj[`${attrs[j]}`] = nodeLists[j][i].value;
         }
@@ -66,40 +64,33 @@ const getUserInputs = () => {
 
     // achivements 
     let achievementsTitleElem = document.querySelectorAll('.achieve_title'),
-        achievementsDescriptionElem = document.querySelectorAll('.achieve_description');
+    achievementsDescriptionElem = document.querySelectorAll('.achieve_description');
 
     // experiences
     let expTitleElem = document.querySelectorAll('.exp_title'),
-        expOrganizationElem = document.querySelectorAll('.exp_organization'),
-        expLocationElem = document.querySelectorAll('.exp_location'),
-        expStartDateElem = document.querySelectorAll('.exp_start_date'),
-        expEndDateElem = document.querySelectorAll('.exp_end_date'),
-        expDescriptionElem = document.querySelectorAll('.exp_description');
+    expOrganizationElem = document.querySelectorAll('.exp_organization'),
+    expLocationElem = document.querySelectorAll('.exp_location'),
+    expStartDateElem = document.querySelectorAll('.exp_start_date'),
+    expEndDateElem = document.querySelectorAll('.exp_end_date'),
+    expDescriptionElem = document.querySelectorAll('.exp_description');
 
     // education
     let eduSchoolElem = document.querySelectorAll('.edu_school'),
-        eduDegreeElem = document.querySelectorAll('.edu_degree'),
-        eduCityElem = document.querySelectorAll('.edu_city'),
-        eduStartDateElem = document.querySelectorAll('.edu_start_date'),
-        eduGraduationDateElem = document.querySelectorAll('.edu_graduation_date'),
-        eduDescriptionElem = document.querySelectorAll('.edu_description');
+    eduDegreeElem = document.querySelectorAll('.edu_degree'),
+    eduCityElem = document.querySelectorAll('.edu_city'),
+    eduStartDateElem = document.querySelectorAll('.edu_start_date'),
+    eduGraduationDateElem = document.querySelectorAll('.edu_graduation_date'),
+    eduDescriptionElem = document.querySelectorAll('.edu_description');
 
     let projTitleElem = document.querySelectorAll('.proj_title'),
-        projLinkElem = document.querySelectorAll('.proj_link'),
-        projDescriptionElem = document.querySelectorAll('.proj_description');
+    projLinkElem = document.querySelectorAll('.proj_link'),
+    projDescriptionElem = document.querySelectorAll('.proj_description');
 
-    let loisirElem = document.querySelectorAll('.loisir');
-
-    let skillElem = document.querySelectorAll('.skill'),
-        skillBarElem = document.querySelectorAll('.skill_bar');
-
-    //language
-    let languageElem = document.querySelectorAll('.language'),
-        languageBarElem = document.querySelectorAll('.language_bar');
+    let skillElem = document.querySelectorAll('.skill');
 
     // event listeners for form validation
     firstnameElem.addEventListener('keyup', (e) => validateFormData(e.target, validType.TEXT, 'First Name'));
-    // middlenameElem.addEventListener('keyup', (e) => validateFormData(e.target, validType.TEXT_EMP, 'Middle Name'));
+    middlenameElem.addEventListener('keyup', (e) => validateFormData(e.target, validType.TEXT_EMP, 'Middle Name'));
     lastnameElem.addEventListener('keyup', (e) => validateFormData(e.target, validType.TEXT, 'Last Name'));
     phonenoElem.addEventListener('keyup', (e) => validateFormData(e.target, validType.PHONENO, 'Phone Number'));
     emailElem.addEventListener('keyup', (e) => validateFormData(e.target, validType.EMAIL, 'Email'));
@@ -123,15 +114,11 @@ const getUserInputs = () => {
     projTitleElem.forEach(item => item.addEventListener('keyup', (e) => validateFormData(e.target, validType.ANY, 'Title')));
     projLinkElem.forEach(item => item.addEventListener('keyup', (e) => validateFormData(e.target, validType.ANY, 'Link')));
     projDescriptionElem.forEach(item => item.addEventListener('keyup', (e) => validateFormData(e.target, validType.ANY, 'Description')));
-    loisirElem.forEach(item => item.addEventListener('keyup', (e) => validateFormData(e.target, validType.ANY, 'loisir')));
     skillElem.forEach(item => item.addEventListener('keyup', (e) => validateFormData(e.target, validType.ANY, 'skill')));
-    skillBarElem.forEach(item => item.addEventListener('keyup', (e) => validateFormData(e.target, validType.ANY, 'skill_bar')));
-    languageElem.forEach(item => item.addEventListener('keyup', (e) => validateFormData(e.target, validType.ANY, 'language')));
-    languageBarElem.forEach(item => item.addEventListener('keyup', (e) => validateFormData(e.target, validType.ANY, 'language_bar')));
 
     return {
         firstname: firstnameElem.value,
-        // middlename: middlenameElem.value,
+        middlename: middlenameElem.value,
         lastname: lastnameElem.value,
         designation: designationElem.value,
         address: addressElem.value,
@@ -142,51 +129,49 @@ const getUserInputs = () => {
         experiences: fetchValues(['exp_title', 'exp_organization', 'exp_location', 'exp_start_date', 'exp_end_date', 'exp_description'], expTitleElem, expOrganizationElem, expLocationElem, expStartDateElem, expEndDateElem, expDescriptionElem),
         educations: fetchValues(['edu_school', 'edu_degree', 'edu_city', 'edu_start_date', 'edu_graduation_date', 'edu_description'], eduSchoolElem, eduDegreeElem, eduCityElem, eduStartDateElem, eduGraduationDateElem, eduDescriptionElem),
         projects: fetchValues(['proj_title', 'proj_link', 'proj_description'], projTitleElem, projLinkElem, projDescriptionElem),
-        loisirs: fetchValues(['loisir'], loisirElem),
-        skills: fetchValues(['skill,skill_bar'], skillElem, skillBarElem),
-        languages: fetchValues(['language,language_bar'], languageElem, languageBarElem)
+        skills: fetchValues(['skill'], skillElem)
     }
 };
 
-function validateFormData(elem, elemType, elemName) {
+function validateFormData(elem, elemType, elemName){
     // checking for text string and non empty string
-    if (elemType == validType.TEXT) {
-        if (!strRegex.test(elem.value) || elem.value.trim().length == 0) addErrMsg(elem, elemName);
+    if(elemType == validType.TEXT){
+        if(!strRegex.test(elem.value) || elem.value.trim().length == 0) addErrMsg(elem, elemName);
         else removeErrMsg(elem);
     }
 
     // checking for only text string
-    if (elemType == validType.TEXT_EMP) {
-        if (!strRegex.test(elem.value)) addErrMsg(elem, elemName);
+    if(elemType == validType.TEXT_EMP){
+        if(!strRegex.test(elem.value)) addErrMsg(elem, elemName);
         else removeErrMsg(elem);
     }
 
     // checking for email
-    if (elemType == validType.EMAIL) {
-        if (!emailRegex.test(elem.value) || elem.value.trim().length == 0) addErrMsg(elem, elemName);
+    if(elemType == validType.EMAIL){
+        if(!emailRegex.test(elem.value) || elem.value.trim().length == 0) addErrMsg(elem, elemName);
         else removeErrMsg(elem);
     }
 
     // checking for phone number
-    if (elemType == validType.PHONENO) {
-        if (!phoneRegex.test(elem.value) || elem.value.trim().length == 0) addErrMsg(elem, elemName);
+    if(elemType == validType.PHONENO){
+        if(!phoneRegex.test(elem.value) || elem.value.trim().length == 0) addErrMsg(elem, elemName);
         else removeErrMsg(elem);
     }
 
     // checking for only empty
-    if (elemType == validType.ANY) {
-        if (elem.value.trim().length == 0) addErrMsg(elem, elemName);
+    if(elemType == validType.ANY){
+        if(elem.value.trim().length == 0) addErrMsg(elem, elemName);
         else removeErrMsg(elem);
     }
 }
 
 // adding the invalid text
-function addErrMsg(formElem, formElemName) {
+function addErrMsg(formElem, formElemName){
     formElem.nextElementSibling.innerHTML = `${formElemName} is invalid`;
 }
 
 // removing the invalid text 
-function removeErrMsg(formElem) {
+function removeErrMsg(formElem){
     formElem.nextElementSibling.innerHTML = "";
 }
 
@@ -196,8 +181,8 @@ const showListData = (listData, listContainer) => {
     listData.forEach(listItem => {
         let itemElem = document.createElement('div');
         itemElem.classList.add('preview-item');
-
-        for (const key in listItem) {
+        
+        for(const key in listItem){
             let subItemElem = document.createElement('span');
             subItemElem.classList.add('preview-item-val');
             subItemElem.innerHTML = `${listItem[key]}`;
@@ -208,80 +193,16 @@ const showListData = (listData, listContainer) => {
     })
 }
 
-const showListDataWithLevel = (listData, listContainer) => {
-    listContainer.innerHTML = "";
-    listData.forEach(listItem => {
-        let itemElem = document.createElement('div');
-        itemElem.classList.add('preview-item');
-        let i = 0;
-        let show = true;
-        for (const key in listItem) {
-            if (i == 0) {
-                if (`${listItem[key]}` == '')
-                    show = false;
-                let subItemElem = document.createElement('span');
-                subItemElem.classList.add('preview-item-val');
-                subItemElem.innerHTML = `${listItem[key]}`;
-                itemElem.appendChild(subItemElem);
-            }
-            else if (show) {
-
-                let space = document.createElement('span');
-                space.style.width = '5px';
-
-
-                space.style.display = 'inline-block';
-                itemElem.appendChild(space);
-                let subItemElem = document.createElement('span');
-                subItemElem.style.width = (`${listItem[key]}` * 20) + 'px'; // Définir la largeur de la div
-                subItemElem.style.height = '10px'; // Définir la hauteur de la div
-                subItemElem.style.backgroundColor = 'blue'; // Définir la couleur de fond de la div
-                subItemElem.style.borderRadius = '0px'; // Définir le rayon de la bordure pour créer une forme carrée
-                subItemElem.style.display = 'inline-block';
-                itemElem.appendChild(subItemElem);
-                let subItemElem_ = document.createElement('span');
-                subItemElem_.style.width = (100 - `${listItem[key]}` * 20) + 'px'; // Définir la largeur de la div
-                subItemElem_.style.height = '10px'; // Définir la hauteur de la div
-                subItemElem_.style.backgroundColor = '#f4f4f5'; // Définir la couleur de fond de la div
-                subItemElem_.style.borderRadius = '0px'; // Définir le rayon de la bordure pour créer une forme carrée
-                subItemElem_.style.display = 'inline-block';
-                itemElem.appendChild(subItemElem_);
-                // let subItemElem = document.createElement('input');
-                // subItemElem.type = 'range';
-                // subItemElem.disabled = true;
-                // subItemElem.value = `listItem[key]`;
-                // subItemElem.classList.add('preview-item-val');
-                // subItemElem.innerHTML = `${listItem[key]}`;
-                // itemElem.appendChild(subItemElem);
-            }
-            i++;
-        }
-
-        listContainer.appendChild(itemElem);
-    })
-}
-
 const displayCV = (userData) => {
-    nameDsp.innerHTML = userData.firstname + " " + userData.lastname;
-    phonenoDsp.innerHTML = ''
-    if (userData.phoneno.length != 0) {
-        phonenoDsp.innerHTML = '<img class=\'icon\' src="assets/baseline-phone.svg" alt=""></img>' + userData.phoneno;
-    }
-    emailDsp.innerHTML = ''
-    if (userData.email.length != 0) {
-        emailDsp.innerHTML = '<img class=\'icon\' src="assets/icons/round-mail.svg" alt=""></img>' + userData.email;
-    }
-    addressDsp.innerHTML = ''
-    if (userData.address.length != 0) {
-        addressDsp.innerHTML = '<img class=\'icon\' src="assets/icons/address-marker.svg" alt="adress"></img>' + userData.address;
-    }
+    nameDsp.innerHTML = userData.firstname + " " + userData.middlename + " " + userData.lastname;
+    phonenoDsp.innerHTML = userData.phoneno;
+    emailDsp.innerHTML = userData.email;
+    addressDsp.innerHTML = userData.address;
     designationDsp.innerHTML = userData.designation;
     summaryDsp.innerHTML = userData.summary;
     showListData(userData.projects, projectsDsp);
     showListData(userData.achievements, achievementsDsp);
-    showListData(userData.loisirs, loisirsDsp);
-    showListDataWithLevel(userData.languages, languageDsp);
-    showListDataWithLevel(userData.skills, skillsDsp);
+    showListData(userData.skills, skillsDsp);
     showListData(userData.educations, educationsDsp);
     showListData(userData.experiences, experiencesDsp);
 }
@@ -293,15 +214,15 @@ const generateCV = () => {
     console.log(userData);
 }
 
-function previewImage() {
+function previewImage(){
     let oFReader = new FileReader();
     oFReader.readAsDataURL(imageElem.files[0]);
-    oFReader.onload = function (ofEvent) {
+    oFReader.onload = function(ofEvent){
         imageDsp.src = ofEvent.target.result;
     }
 }
 
 // print CV
-function printCV() {
+function printCV(){
     window.print();
 }
