@@ -177,12 +177,7 @@ a{
 }
 
 /* navbar part */
-.navbar{
-    height: 80px;
-    display: flex;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 8px;
-}
+zz
 
 .navbar .container-cv{
     width: 100%;
