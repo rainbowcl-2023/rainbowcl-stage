@@ -1,4 +1,5 @@
-var acc = document.getElementsByClassName("accordion");
+
+var acc = document.getElementsByClassName("cv-form-row-title");
 var i;
 
 for (i = 0; i < acc.length; i++) {
@@ -9,7 +10,8 @@ for (i = 0; i < acc.length; i++) {
       panel.style.maxHeight = null;
     } else {
         console.log(panel.scrollHeight)
-      panel.style.maxHeight = panel.scrollHeight + "px";
+    //   panel.style.maxHeight = panel.scrollHeight + "px";
+      panel.style.maxHeight = "fit-content";
     }
   });
 
@@ -31,3 +33,24 @@ for (i = 0; i < acc.length; i++) {
 
 }
 
+
+
+// form repeater
+$(document).ready(function(){
+    $('.repeater').repeater({
+        initEmpty: false,
+        defaultValues: {
+            'text-input': ''
+        },
+        show:function(){
+            $(this).slideDown();
+        },
+        hide: function(deleteElement){
+            $(this).slideUp(deleteElement);
+            setTimeout(() => {
+                generateCV();
+            }, 500);
+        },
+        isFirstItemUndeletable: true
+    })
+})

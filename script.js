@@ -1,61 +1,4 @@
 
-var acc = document.getElementsByClassName("cv-form-row-title");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-        console.log(panel.scrollHeight)
-    //   panel.style.maxHeight = panel.scrollHeight + "px";
-      panel.style.maxHeight = "fit-content";
-    }
-  });
-
-  function updateParagraphText(input, paragraph) {
-    // Récupérer la valeur de l'input
-    var input = document.getElementById(input);
-    var inputValue = input.value;
-    // Mettre à jour le texte du paragraphe
-    var paragraphs = document.getElementById(paragraph);
-    
-    paragraphs.textContent = inputValue;
-    
-    if (input.value === '') {
-      document.querySelector('.'+paragraph).style.display = 'none';
-    } else {
-      document.querySelector('.'+paragraph).style.display = 'flex';
-    }
-  }
-
-}
-
-
-
-// form repeater
-
-$(document).ready(function(){
-    $('.repeater').repeater({
-        initEmpty: false,
-        defaultValues: {
-            'text-input': ''
-        },
-        show:function(){
-            $(this).slideDown();
-        },
-        hide: function(deleteElement){
-            $(this).slideUp(deleteElement);
-            setTimeout(() => {
-                generateCV();
-            }, 500);
-        },
-        isFirstItemUndeletable: true
-    })
-})
-
 // =================================this handles the sticky scroll of the sidebar 
 window.addEventListener('scroll', (e) => {
   
@@ -88,8 +31,8 @@ window.addEventListener('scroll', (e) => {
 })
 
 // =================================================Handles the login and signup popup
-const Connectionbuttons = document.querySelectorAll('#option-menu > button')
-Connectionbuttons.forEach( button => button.addEventListener('click', () => {
+const connectionButtons = document.querySelectorAll('#option-menu > button')
+connectionButtons.forEach( button => button.addEventListener('click', () => {
   const filter = document.querySelector(`#${button.value}-filter`)
   const form = document.querySelector(`#${button.value}-form`)
   filter.style['top'] = '0'
@@ -100,36 +43,56 @@ Connectionbuttons.forEach( button => button.addEventListener('click', () => {
 }))
 
 
+// ================================================= Handles the closing of the login and signup forms
+
+const closeButtons = document.querySelectorAll('.close-form-button')
+closeButtons.forEach(button => button.addEventListener('click', () => {
+  const filter = document.querySelector(`#${button.value}-filter`)
+  const form = document.querySelector(`#${button.value}-form`)
+  filter.style['top'] = '-100%'
+  filter.style['z-index'] = 0
+  filter.style['opacity'] = 0
+  form.style['z-index'] = 0
+  
+}))
+
+
 
 // =================================================this handles the swap action of the signup block
 function handleNextBlock() {
-  const signupBlocks = document.querySelectorAll('.form-main .block')
+  const block1 = document.querySelector('#block-1')
+  const block2 = document.querySelector('#block-2')
   const followButton = document.querySelector('#follow-button')
   const signupButton = document.querySelector('#signup-button')
 
-  if (signupBlocks[0].classList.contains('current')) {
-    signupBlocks[0].style['left'] = '-120%'
-    signupBlocks[0].classList.remove('current')
+  if (block1.classList.contains('current')) {
+    block1.style['left'] = '-120%'
+    block1.classList.remove('current')
 
-    signupBlocks[1].style['left'] = '0'
-    signupBlocks[1].classList.add('current')
+    block2.style['left'] = '0'
+    block2.classList.add('current')
 
     followButton.innerHTML = '<< precedent'
-    signupButton.style['display'] = 'inline'
+    signupButton.style['visibility'] = 'visible'
+    signupButton.setAttribute('disabled', false)
     signupButton.style['background-color'] = 'black'
   } else {
-    signupBlocks[1].style['left'] = '120%'
-    signupBlocks[1].classList.remove('current')
+    block2.style['left'] = '120%'
+    block2.classList.remove('current')
 
-    signupBlocks[0].style['left'] = '0'
-    signupBlocks[0].classList.add('current')
+    block1.style['left'] = '0'
+    block1.classList.add('current')
 
     followButton.innerHTML = 'suivant >>'
     signupButton.style['background-color'] = 'rgba(255, 255, 255, 0.211)'
-    signupButton.style['display'] = 'none'
+    signupButton.setAttribute('disabled', true)
+    signupButton.style['visibility'] = 'hidden'
 
   }
 }
+
+const followButton = document.querySelector('#follow-button') 
+followButton.addEventListener('click', handleNextBlock)
 
 
 // ===================================================== animate publicity slides
