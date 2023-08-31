@@ -201,7 +201,11 @@ const displayCV = (userData) => {
     }
     emailDsp.innerHTML = ''
     if(userData.email.length!=0){
-        emailDsp.innerHTML = '<img class=\'icon\' src="assets/baseline-phone.svg" alt=""></img>' + userData.email;
+        emailDsp.innerHTML = '<img class=\'icon\' src="assets/icons/round-mail.svg" alt=""></img>' + userData.email;
+    }
+    addressDsp.innerHTML = ''
+    if(userData.address.length!=0){
+        addressDsp.innerHTML = '<img class=\'icon\' src="assets/icons/address-marker.svg" alt="adress"></img>' + userData.address;
     }
     addressDsp.innerHTML = userData.address;
     designationDsp.innerHTML = userData.designation;
