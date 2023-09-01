@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    
     <header id="index-header">
         <a href="index.html"><img id="logo-image" src="assets/icons/africarxiv.svg" alt=""></a>
         <div id="option-menu">
@@ -448,6 +449,9 @@
                             <div class="preview-blk-title">
                                 <h3>à propos</h3>
                             </div>
+                            <div class="preview-item">
+                                <span class="preview-item-val" id="summary_dsp"></span>
+                            </div>
                             <div class="preview-blk-list">
                                 <div class="preview-item">
                                     <span class="preview-item-val" id="phoneno_dsp"></span>
@@ -457,9 +461,6 @@
                                 </div>
                                 <div class="preview-item">
                                     <span class="preview-item-val" id="address_dsp"></span>
-                                </div>
-                                <div class="preview-item">
-                                    <span class="preview-item-val" id="summary_dsp"></span>
                                 </div>
                             </div>
                         </div>
@@ -522,8 +523,15 @@
                 </div>
             </div>
         </section>
+
+        <section class="print-btn-sc">
+            <div class="container-cv">
+                <button type="button" class="print-btn btn btn-primary" onclick="enregistrer('preview-content')">Print CV</button>
+            </div>
+        </section>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
 
     <!-- jquery cdn -->
     <script src="https://code.jquery.com/jquery-3.6.4.js"
@@ -536,6 +544,13 @@
     <script src="cv_script.js"></script>
     <!-- app js -->
     <script src="app.js"></script>
+
+    <script>
+function enregistrer(divId) {
+  const element = document.getElementById(divId);
+  html2pdf().from(element).save();
+}
+    </script>
 </body>
 
 </html>
