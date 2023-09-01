@@ -305,3 +305,20 @@ function previewImage() {
 function printCV() {
     window.print();
 }
+
+
+function enregistrerDivEnPDF(divId) {
+  const doc = new jsPDF();
+    // Obtenir la div que vous souhaitez imprimer
+    const divToPrint = document.getElementById(divId);
+
+    // Obtenir les dimensions de la div
+    const width = divToPrint.offsetWidth;
+    const height = divToPrint.offsetHeight;
+
+    // Convertir la div en image base64
+    const imgWidth = doc.internal.pageSize.getWidth(); // Obtenir la largeur de la page PDF
+  const imgHeight = img.height * imgWidth / img.width; // Calculer la hauteur proportionnelle
+  doc.addImage(img, 'JPEG', 0, 0, imgWidth, imgHeight); // Ajouter l'image redimensionnée au PDF
+  doc.save('votre_fichier.pdf'); 
+}

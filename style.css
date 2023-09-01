@@ -1883,7 +1883,10 @@ container-cv button {
   padding: 64px 0px;
   background-color: #f3f2ef;
 }
-
+.print-btn-sc {
+    padding: 64px 0px;
+    background-color: #f3f2ef;
+}
 .cv-form-row-title {
   background-color: white;
   color: #444;
@@ -2169,9 +2172,6 @@ textarea {
   }
 }
 
-.print-btn-sc {
-  margin: 2rem 0 6rem 0;
-}
 
 /* print section */
 @media print {
