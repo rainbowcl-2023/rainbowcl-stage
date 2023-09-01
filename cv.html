@@ -16,10 +16,24 @@
     <header id="index-header">
         <a href="index.html"><img id="logo-image" src="assets/icons/africarxiv.svg" alt=""></a>
         <div id="option-menu">
-            <select name="languages" id="language-select">
-                <option value="francais">Fr</option>
-                <option value="englais">Eng</option>
-            </select>
+            <div id="language-select">
+                <div id="selected-language">
+                    <img src="assets/icons/flag-uk.svg" alt="">
+                    <span>Eng</span>
+                </div>
+                <img src="assets/icons/down-fill.svg" alt="">
+                <ul id="language-list">
+                    <li >
+                        <img src="assets/icons/flag-france.svg" alt="">
+                        <span>Francais</span>
+                    </li>
+                    <li >
+                        <img src="assets/icons/flag-uk.svg" alt="">
+                        <span>English</span>
+                    </li>
+                    
+                </ul>
+            </div>
             <button id="login-btn-link" value='login'>Login</button>
             <button id="signup-btn-link" value="signup">Signup</button>
         </div>
@@ -55,13 +69,13 @@
                                 <div class="pannel cv-form-row cv-form-row-about">
                                     <div class="cols-2">
                                         <div class="form-elem">
-                                            <label for="" class="form-label">Prénom</label>
+                                            <label for="" class="form-label">Nom</label>
                                             <input name="firstname" type="text" class="form-control firstname" id=""
                                                 onkeyup="generateCV()" placeholder="e.g. John">
                                             <span class="form-text"></span>
                                         </div>
                                         <div class="form-elem">
-                                            <label for="" class="form-label">Nom</label>
+                                            <label for="" class="form-label">Prénom</label>
                                             <input name="lastname" type="text" class="form-control lastname" id=""
                                                 onkeyup="generateCV()" placeholder="e.g. Doe">
                                             <span class="form-text"></span>
@@ -105,7 +119,7 @@
                                             <span class="form-text"></span>
                                         </div>
                                         <div class="form-elem">
-                                            <label for="" class="form-label">Sommaire</label>
+                                            <label for="" class="form-label">A propos de moi</label>
                                             <input name="summary" type="text" class="form-control summary" id=""
                                                 onkeyup="generateCV()" placeholder="e.g. Doe">
                                             <span class="form-text"></span>
@@ -452,6 +466,7 @@
                             <div class="preview-item">
                                 <span class="preview-item-val" id="summary_dsp"></span>
                             </div>
+                            <br>
                             <div class="preview-blk-list">
                                 <div class="preview-item">
                                     <span class="preview-item-val" id="phoneno_dsp"></span>
@@ -542,6 +557,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- custom js -->
     <script src="cv_script.js"></script>
+    <script src="./script.js"></script>
+
     <!-- app js -->
     <script src="app.js"></script>
 
