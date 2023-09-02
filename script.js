@@ -74,7 +74,7 @@ function handleNextBlock() {
 
     followButton.innerHTML = '<< precedent'
     signupButton.style['visibility'] = 'visible'
-    signupButton.setAttribute('disabled', false)
+    signupButton.disabled = false
     signupButton.style['background-color'] = 'black'
   } else {
     block2.style['left'] = '120%'
@@ -85,7 +85,7 @@ function handleNextBlock() {
 
     followButton.innerHTML = 'suivant >>'
     signupButton.style['background-color'] = 'rgba(255, 255, 255, 0.211)'
-    signupButton.setAttribute('disabled', true)
+    signupButton.disabled = true
     signupButton.style['visibility'] = 'hidden'
 
   }
