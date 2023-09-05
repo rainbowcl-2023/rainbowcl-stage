@@ -832,9 +832,10 @@ body {
   position: relative;
   width: 50%;
   right: -100%;
-  overflow-y: scroll;
+  overflow-y: hidden;
   background-color: white;
   box-shadow: -5px 0px 10px 5px rgba(40, 40, 40, 0.352);
+  padding: 0 1em;
 }
 
 @keyframes swipe-edit-section {
@@ -845,6 +846,14 @@ body {
   100% {
     right: 0;
   }
+}
+
+#edit-header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
 }
 
 #close-edit-btn {
@@ -882,6 +891,37 @@ body {
   object-fit: contain;
 }
 
+
+#edit-profile-form {
+  position: relative;
+  top: 20px;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+#edit-image-section {
+  height: 20vh;
+  width: 100%;
+  position: relative;
+}
+
+#edit-cover-wrapper {
+  height: 100%;
+  width: 100%;
+  background-color: grey;
+}
+
+#edit-profile-wrapper {
+  position: absolute;
+  top: 100%;
+  left: 1em;
+  transform: translateY(-60%);
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  background-color: black;
+  border: 4px solid white;
+}
 
 /* offer detail main section */
 
