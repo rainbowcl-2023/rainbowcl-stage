@@ -302,7 +302,8 @@ body {
 */
 
 #index-header,
-#offer-detail-header {
+#offer-detail-header,
+#profile-page-header {
   position: fixed;
   width: 100%;
   display: flex;
@@ -713,7 +714,7 @@ body {
 /* profile main section */
 
 #profile-main-section {
-  height: 250vh;
+  height: 170vh;
   width: 70%;
   padding-top: 15vh;
 }
@@ -721,17 +722,17 @@ body {
   height: 50vh;
   width: 100%;
 }
-#assets-image {
+#std-image {
   position: relative;
   height: 100%;
   width: 100%;
 }
-#assets-image img {
+#std-image img {
   object-fit: countain;
   height: 90%;
-  width: 90%;
+  width: 100%;
 }
-#asset-image {
+#student-img-wrapper {
   position: absolute;
   height: fit-content;
   width: fit-content;
@@ -739,18 +740,18 @@ body {
   left: 0;
   transform: translateX(30%);
 }
-#asset-image img {
+#student-img-wrapper img {
   height: 130px;
   width: 130px;
   border-radius: 100%;
-  background-color: red;
+  border: 4px solid white;
   color: white;
-  object-fit: contain;
 }
 #profile-information {
   padding-top: 1.5em;
   border-bottom: 2px solid #8880808c;
   padding-bottom: 1em;
+  position: relative;
 }
 #profile-information h1 {
   font-size: 2em;
@@ -761,6 +762,32 @@ body {
   font-size: 1em;
   color: black;
 }
+
+#profile-information button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7em;
+  gap: 0.8em;
+  font-size: 0.9em;
+  background-color: var(--actionable-color);
+  color: white;
+  position: absolute;
+  bottom: 1em;
+  right: 0;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+#profile-information button:hover {
+  background-color: #36a4a4;
+}
+
+#profile-information button img {
+  height: 20px;
+  width: 20px;
+}
+
 .profile-elements {
   padding-top: 1.5em;
   padding-bottom: 1em;
