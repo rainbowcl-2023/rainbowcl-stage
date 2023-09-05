@@ -195,3 +195,5 @@ previousPageButton.addEventListener('click', () => {
   goToPage(parseInt(previousPageButton.value))
 })
 
+/** ================================================ Profile page  */
+

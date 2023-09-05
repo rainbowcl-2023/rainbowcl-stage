@@ -717,6 +717,7 @@ body {
   height: 170vh;
   width: 70%;
   padding-top: 15vh;
+  position: relative;
 }
 #profile-assets {
   height: 50vh;
@@ -811,6 +812,43 @@ body {
   width: 20px;
   object-fit: contain;
 }
+
+#edit-profile-filter {
+  position: fixed;
+  top: 12vh;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.14);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.none-profile-filter {
+  display: none !important;
+}
+
+#edit-profile-section {
+  position: relative;
+  width: 50%;
+  right: -100%;
+  overflow-y: scroll;
+  background-color: white;
+  box-shadow: -5px 0px 10px 5px rgba(40, 40, 40, 0.352);
+}
+
+@keyframes swipe-edit-section {
+  0% {
+    right: -100%;
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
+
+
 /* offer detail main section */
 
 #offer-detail-main {
