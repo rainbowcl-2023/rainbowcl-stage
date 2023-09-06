@@ -982,6 +982,19 @@ body {
 	width: auto;
 }
 
+#edit-personnal-information-section{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 3em;
+}
+
+.edit-name-and-surname{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-betweens;
+}
+
 /* offer detail main section */
 
 #offer-detail-main {
