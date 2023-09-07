@@ -850,11 +850,17 @@ body {
 	left: 0;
 	width: 100%;
 	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 700;
+	font-size: 1.2em;
+	color: var(--primary-color)
 }
 
 #close-edit-btn {
 	position: absolute;
-	top: 10px;
+	top: 5px;
 	left: 10px;
 	width: 40px;
 	height: 40px;
@@ -988,7 +994,7 @@ body {
   top: 3em;
   padding-right: 1em;
   width: 100%;
-  height: 40vh;
+  height: 50vh;
 }
 
 .edit-name-and-surname{
@@ -1018,15 +1024,36 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.7em;
-  height: 60%;
+  height: 70%;
   width: 100%;
 }
 
-#edit-biography textarea{
-  background-color: #dbd6d6;
-  width: 100%;
-  height: 70%;
-  border-radius: 5px;
+#edit-biography textarea {
+	background-color: #e6e6e6;
+	color: rgb(47, 47, 47);
+	outline: none;
+	border-radius: 5px;
+	line-height: 1.4;
+	font-size: 1em;
+	padding: 1em;
+	font-weight: 500;
+	height: 90%;
+	width: 100%;
+	border: 2px solid transparent;
+	transition: 0.3s ease;
+	box-shadow: -2px 2px 7px 0px rgba(0, 0, 0, 0.398);
+}
+
+#edit-biography textarea:hover {
+	cursor: pointer;
+	background-color: #f3f3f3;
+}
+
+#edit-biography textarea:focus {
+	cursor: text;
+	background-color: white;
+	border: 2px solid var(--primary-color);
+	color: var(--primary-color)
 }
 
 /* offer detail main section */
