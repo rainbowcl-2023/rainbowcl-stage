@@ -720,7 +720,7 @@ body {
 	padding-top: 15vh;
 	position: relative;
 }
-
+/* 
 #profile-assets {
 	height: 50vh;
 	width: 100%;
@@ -1127,7 +1127,7 @@ body {
 	background-color: white;
 	border: 2px solid var(--primary-color);
 	color: var(--primary-color)
-}
+} */
 
 /* offer detail main section */
 
