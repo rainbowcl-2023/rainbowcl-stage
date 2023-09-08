@@ -2,11 +2,20 @@
 const languageSelect = document.querySelector('#language-select')
 const selectedLanguage = document.querySelector('#selected-language')
 const languageItems = document.querySelectorAll('#language-list li')
+const languageList = document.querySelector('#language-list')
 
-languageSelect.addEventListener('click', () => {
-  const languageList = document.querySelector('#language-list')
-  languageList.classList.toggle('show-list')
+
+languageSelect.addEventListener('blur', () => {
+    languageList.classList.remove('show-list')
 })
+
+languageSelect.addEventListener('click', (event) => {
+  if (!languageList.classList.contains('show-list')) {
+    languageList.classList.add('show-list')
+  }
+})
+
+
 
 
 languageItems.forEach(item => item.addEventListener('click', (event) => {
@@ -22,8 +31,11 @@ languageItems.forEach(item => item.addEventListener('click', (event) => {
   const newImage = event.target.querySelector('img')
   const newSpan = event.target.querySelector('span')
 
+
+  event.stopPropagation()
   selectedImage.src = newImage.src
   selectedSpan.innerHTML = languages[newSpan.innerHTML]
+  languageList.classList.remove('show-list')
 }))
 
 // ========================================== Handles the drop down menu button
@@ -61,7 +73,12 @@ function morphToMenuButton() {
   menuButton.classList.add('menu-button')
 }
 
-menuButton.addEventListener('click', (event) => {
+menuButton?.addEventListener('blur', () => {
+  morphToMenuButton()
+  menuList.classList.remove('visible-menu')
+})
+
+menuButton?.addEventListener('click', (event) => {
   event.target.classList.contains('menu-button') ? morphToCloseButton() : morphToMenuButton()
   menuList.classList.toggle('visible-menu')
 })
