@@ -715,11 +715,186 @@ body {
 /* profile main section */
 
 #profile-main-section {
-	height: 170vh;
-	width: 70%;
+	height: 200vh;
+	width: 100%;
 	padding-top: 15vh;
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	padding: 5em;
 }
+
+#contact{
+	height: 20%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 1em; 
+	margin-top: 2em;
+	border: 1px solid rgb(214, 210, 210);
+	border-radius: 1%;
+}
+
+#contact hr {
+	width: 100%;
+	border: 1px solid rgb(214, 210, 210);
+}
+
+#contact #name_and_picture{
+	height: 50%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1em;
+}
+
+#name_and_picture #picture{
+	background-color: #c6caaf;
+	aspect-ratio: 1/1;
+	height: 100%;
+	margin-bottom: 10px;
+	border-radius: 100%;
+}
+
+#contact #mail_and_number{
+	height: 25%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: start;
+}
+
+#mail_and_number #mail{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1em;
+}
+
+#mail img{
+	height: 5%;
+	width: 5%;
+}
+
+#mail_and_number #number{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1em;
+}
+
+#number img{
+	height: 5%;
+	width: 5%;
+}
+
+#contact #manage_my_informations{
+	align-items: center;
+	height: 25%;
+}
+
+#manage_my_informations a{
+	position: relative;
+	top: 1.5em;
+	padding: 0.5em;
+	align-items: center;
+	margin-bottom: 1em;
+	border: 1px solid rgb(208, 131, 211);
+	border-radius: 5%;
+}
+
+#presentation{
+	height: 15%;
+	display: flex;
+	flex-direction: column;
+	padding: 1em;
+	margin-top: 2em;
+	border: 1px solid rgb(214, 210, 210);
+	border-radius: 1%;
+}
+
+#presentation hr {
+	width: 100%;
+	border: 1px solid rgb(214, 210, 210);
+}
+
+#presentation #presentation_title{
+	height: 50%;
+}
+
+ #resume a{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#resume-link img{
+	height: 10%;
+	width: 10%;
+}
+
+#social_profile{
+	background-color: #0c0f0f;
+	height: 15%;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+}
+
+#social_profile #social_profile_title{
+	background-color: #b4e7e7;
+	height: 50%;
+}
+
+#social_profile #linkedin{
+	background-color: #085f5f;
+	height: 50%;
+}
+
+#education{
+	background-color: #800000;
+	height: 20%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#education #education_title{
+	height: 100%;
+}
+
+#education_title #education_informations{
+	height: 50%;
+	background-color: rgb(216, 160, 160);
+}
+
+#language_level{
+	background-color: #806900;
+	height: 20%;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+}
+
+#language_level #language_title{
+	background-color:#1a91f0;
+	height: 40%;
+}
+
+#language_level #french{
+	background-color: #faf4f4;
+	height: 30%;
+}
+
+#language_level #english{
+	background-color: #000;
+	height: 30%;
+}
+
 /* 
 #profile-assets {
 	height: 50vh;
