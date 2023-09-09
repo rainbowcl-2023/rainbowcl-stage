@@ -900,8 +900,11 @@ body {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	gap: 2em;
-	padding: 5em;
+	gap: 1em;
+	padding-top: 5em;
+	padding-bottom: 3em;
+	padding-left: 5em;
+	padding-right: 5em;
 }
 
 #contact{
@@ -911,12 +914,6 @@ body {
 	flex-direction: column;
 	padding: 1em; 
 	margin-top: 2em;
-	border: 1px solid rgb(214, 210, 210);
-	border-radius: 1%;
-}
-
-#contact hr {
-	width: 100%;
 	border: 1px solid rgb(214, 210, 210);
 }
 
@@ -942,6 +939,7 @@ body {
 	flex-direction: row;
 	align-items: center;
 	justify-content: start;
+	border-top: 1px solid rgb(214, 210, 210);
 }
 
 #mail_and_number #mail{
@@ -971,11 +969,12 @@ body {
 #contact #manage_my_informations{
 	align-items: center;
 	height: 25%;
+	border-top: 1px solid rgb(214, 210, 210);
 }
 
 #manage_my_informations a{
 	position: relative;
-	top: 1.5em;
+	top: 1.2em;
 	padding: 0.5em;
 	align-items: center;
 	margin-bottom: 1em;
@@ -993,13 +992,13 @@ body {
 	border-radius: 1%;
 }
 
-#presentation hr {
-	width: 100%;
-	border: 1px solid rgb(214, 210, 210);
-}
-
 #presentation #presentation_title{
 	height: 50%;
+}
+
+#presentation #resume{
+	height: 50%;
+	border-top: 1px solid rgb(214, 210, 210);
 }
 
  #resume a{
@@ -1017,61 +1016,114 @@ body {
 }
 
 #social_profile{
-	background-color: #0c0f0f;
 	height: 15%;
 	display: flex;
 	flex-direction: column;
 	gap: 0.5em;
+	padding: 1em;
+	margin-top: 2em;
+	border: 1px solid rgb(214, 210, 210);
+	border-radius: 1%;
 }
 
 #social_profile #social_profile_title{
-	background-color: #b4e7e7;
 	height: 50%;
 }
 
-#social_profile #linkedin{
-	background-color: #085f5f;
+#social_profile #social-media{
 	height: 50%;
+	border-top: 1px solid rgb(214, 210, 210);
+}
+
+#social-media a{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#social-media-link img{
+	height: 10%;
+	width: 10%;
 }
 
 #education{
-	background-color: #800000;
 	height: 20%;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	padding: 1em;
+	margin-top: 2em;
+	border: 1px solid rgb(214, 210, 210);
 }
 
 #education #education_title{
-	height: 100%;
+	height: 30%;
 }
 
-#education_title #education_informations{
-	height: 50%;
-	background-color: rgb(216, 160, 160);
+#education #education_informations{
+	height: 70%;
+	border: 1px solid rgb(214, 210, 210);
+	display: flex;
+	flex-direction: column;
+	padding: 1em;
+}
+
+#education_informations #field{
+	font-size: 18px;
 }
 
 #language_level{
-	background-color: #806900;
 	height: 20%;
 	display: flex;
 	flex-direction: column;
 	gap: 0.5em;
+	padding: 1em;
+	margin-top: 2em;
+	border: 1px solid rgb(214, 210, 210);
 }
 
 #language_level #language_title{
-	background-color:#1a91f0;
 	height: 40%;
 }
 
 #language_level #french{
-	background-color: #faf4f4;
 	height: 30%;
+	border-top: 1px solid rgb(214, 210, 210);
+}
+
+#french a{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#french-link img{
+	height: 10%;
+	width: 10%;
 }
 
 #language_level #english{
-	background-color: #000;
 	height: 30%;
+	border-top: 1px solid rgb(214, 210, 210);
+}
+
+#english a{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#english-link img{
+	height: 10%;
+	width: 10%;
 }
 
 /* 

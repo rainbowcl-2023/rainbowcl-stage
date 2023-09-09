@@ -13,7 +13,7 @@
 				><img id="logo-image" src="assets/icons/africarxiv.svg" alt=""
 			/></a>
 			<div id="option-menu">
-				<div tabindex="0" id="language-select">
+				<div id="language-select">
 					<div id="selected-language">
 						<img src="assets/icons/flag-uk.svg" alt="" />
 						<span>Eng</span>
@@ -39,7 +39,7 @@
 					<span class="new-unseen">3</span>
 				</a>
 				<div id="profile-dropdown">
-					<button tabindex="0" id="dropdown-button" class="menu-button">
+					<button id="dropdown-button" class="menu-button">
 						<span class="dropdown-span visible-line"></span>
 						<span class="dropdown-span visible-line"></span>
 						<span class="dropdown-span visible-line"></span>
@@ -97,123 +97,80 @@
 		</header>
 
 		<main id="profile-main-section">
-			<section id="profile-assets">
-				<div id="std-image">
-					<img
-						src="assets/images/matthew-manuel-BhLSBX-0rnM-unsplash.jpg"
-						alt=""
-					/>
-					<div id="student-img-wrapper">
-						<img src="assets/images/women-unsplash.jpg" alt="" />
+			<section id="contact">
+				<div id="name_and_picture">
+					<div id="picture"></div>
+					<h1>KELLY KEKO</h1>
+				</div>
+				<hr>
+				<div id="mail_and_number">
+					<div id="mail">
+						<img src="assets/icons/outline-email.svg" alt="">
+						<p>tantanpio@gmail.com</p>
+					</div>
+					<div id="number">
+						<img src="assets/icons/baseline-phone.svg" alt="">
+						<p>+237 658592114</p>
 					</div>
 				</div>
+				<hr>
+				<div id="manage_my_informations">
+					<a href="">
+						<span>
+							Gérer mes informations
+						</span>
+					</a>
+				</div>
 			</section>
-			<section id="profile-information">
-				<h1>Francelle Patricia</h1>
-				<p>
-					Je suis étudiante à l'Ecole Nationale Supérieure Polytechnique de
-					Douala. Je suis au niveau 3 filière Génie Informatique et
-					Télécommunications et j'espère devenir Data Scientist à la fin de ma
-					formation
-				</p>
-				<button id="edit-profile-btn">
-					<span>Modifier</span>
-					<img src="assets/icons/edit.svg" alt="" />
-				</button>
+			<section id="presentation">
+				<div id="presentation_title">
+					<h2>Présentation</h2>
+				</div>
+				<hr>
+				<div id="resume">
+					<a href="" id="resume-link">
+						<span>Reprendre</span>
+						<span>Non fourni</span>
+						<img src="assets/icons/next-ltr-black.svg" alt="">
+					</a>
+				</div>
 			</section>
-			<section class="profile-elements">
-				<h1>Education</h1>
-				<ul>
-					<li>
-						<img src="assets/icons/education.svg" alt="" />
-						Etudiante à l'ENSPD
-					</li>
-					<li>
-						<img src="assets/icons/education.svg" alt="" />
-						Baccalauréat- 2017
-					</li>
-					<li>
-						<img src="assets/icons/education.svg" alt="" />
-						Probatoire- 2016
-					</li>
-				</ul>
+			<section id="social_profile">
+				<div id="social_profile_title">
+					<h2>Profils sociaux</h2>
+				</div>
+				<div id="social-media">
+					<a href="" id="social-media-link">
+						<span>linkedin</span>
+						<span>https://openclassrooms.com/en/profile/linkedin</span>
+						<img src="assets/icons/next-ltr-black.svg" alt="">
+					</a>
+				</div>
 			</section>
-			<section class="profile-elements">
-				<h1>Compétences</h1>
-				<ul>
-					<li>
-						<img src="assets/icons/certificate-fill.svg" alt="" />
-						Maitrise des langages HTML, CSS,JAVASCRIPT, JAVA, PYTHON
-					</li>
-					<li>
-						<img src="assets/icons/certificate-fill.svg" alt="" />
-						Expert en GIT et GITHUB
-					</li>
-					<li>
-						<img src="assets/icons/certificate-fill.svg" alt="" />
-						Développeur agile
-					</li>
-					<li>
-						<img src="assets/icons/certificate-fill.svg" alt="" />
-						Travail en équipe
-					</li>
-				</ul>
+			<section id="education">
+				<div id="education_title">
+					<h2>Education</h2>
+				</div>
+				<div id="education_informations"></div>
 			</section>
-
-			<section id="edit-profile-filter" class="none-profile-filter">
-				<aside id="edit-profile-section">
-					<div id="edit-header">
-						<button id="close-edit-btn">
-							<img src="assets/icons/close-edit.svg" alt="" />
-						</button>
-						<span>Modifiez votre profil</span>
-					</div>
-					<form id="edit-profile-form" action="" enctype="multipart/form-data">
-						<div id="edit-image-section">
-							<div id="edit-cover-wrapper">
-								<img
-									src="assets/images/matthew-manuel-BhLSBX-0rnM-unsplash.jpg"
-									alt=""
-								/>
-
-								<input type="file" accept=".png, .jpg, .jpeg" style="display: none;" id="edit-cover-photo-input">
-								<label for="edit-cover-photo-input" id="cover-photo-edit-btn">
-									<img src="assets/icons/cover-hover.svg" alt="" />
-								</label>
-							</div>
-							<div id="edit-profile-wrapper">
-								<img src="assets/images/women-unsplash.jpg" alt="" />
-
-								<input type="file" accept=".png, .jpg, .jpeg" style="display: none;" id="edit-profile-photo-input">
-								<label for="edit-profile-photo-input" id="profile-photo-edit-btn">
-									<img src="assets/icons/profile-image-hover.svg" alt="" />
-								</label>
-							</div>
-						</div>
-                        <div id="edit-personnal-information-section">
-                            <div class="edit-name-and-surname">
-								<div class="wrapper">
-									<div class="input-data">
-									   <input id="edit-name-input" type="text" required>
-									   <div class="underline"></div>
-									   <label for="edit-name-input">Nom</label>
-									</div>
-								 </div>	
-								 <div class="wrapper">
-									<div class="input-data">
-									   <input id="edit-surname-input" type="text" required>
-									   <div class="underline"></div>
-									   <label for="edit-surname-input">Prénom</label>
-									</div>
-								 </div>								 							
-                            </div>
-                            <div id="edit-biography">
-                                <label for="">A propos de vous</label>
-                                <textarea name="" id="" placeholder="parlez-nous de vous..."></textarea>
-                            </div>
-                        </div>
-                    </form>
-				</aside>
+			<section id="language_level">
+				<div id="language_title">
+					<h2>Niveau de langue</h2>
+				</div>
+				<div id="french">
+					<a href="" id="french-link">
+						<span>Francais</span>
+						<span>Non fourni</span>
+						<img src="assets/icons/next-ltr-black.svg" alt="">	
+					</a>
+				</div>
+				<div id="english">
+					<a href="" id="english-link">
+						<span>Anglais</span>
+						<span>Non fourni</span>
+						<img src="assets/icons/next-ltr-black.svg" alt="">	
+					</a>
+				</div>
 			</section>
 		</main>
 
