@@ -275,10 +275,6 @@ li {
 	list-style: none;
 }
 
-input {
-	border: none;
-	outline: none;
-}
 
 body {
 	display: flex;
@@ -286,11 +282,7 @@ body {
 	flex-direction: column;
 }
 
-body {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-}
+
 
 /* 
 * ===================================================================
@@ -649,7 +641,7 @@ body {
 	top: 150%;
 	right: 0;
 	width: max-content;
-	box-shadow: 0px 3px 5px 5px rgba(0, 0, 0, 0.341);
+	box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.047);
 	background-color: white;
 	border-radius: 5px;
 	padding: 0.5em;
@@ -678,10 +670,18 @@ body {
 
 #dropdown-list li {
 	width: 100%;
+	margin-bottom: 0.7em;
+	transition: 0.3s ease;
+}
+
+#dropdown-list hr {
+	width: 100%;
+	border: 1px solid rgba(86, 86, 86, 0.104);
+	margin-bottom: 1em;
 }
 
 #dropdown-list li:hover {
-	background-color: rgba(128, 128, 128, 0.268);
+	background-color: #8d83ca68;
 }
 
 #dropdown-list li a {
@@ -697,11 +697,24 @@ body {
 
 #dropdown-list li a img {
 	width: 25px;
+	height: 25px;
 	pointer-events: none;
+	object-fit: fill;
 }
 
 #dropdown-list li a span {
 	pointer-events: none;
+}
+
+#menu-header a img {
+	height: 40px !important;
+	width: 40px !important;
+	border-radius: 100%;
+	object-fit: fill;
+}
+
+#menu-header a span {
+	font-size: 1.2em;
 }
 
 /* 
@@ -711,6 +724,172 @@ body {
 *
 *====================================================================
 */
+
+/* edit profile main section */
+#edit-profile-main {
+	padding-top: 15vh;
+	width: 100%;
+	height: 150vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#edit-profile-form {
+	height: 100%;
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 2em;
+	padding-top: 1em;
+}
+
+#edit-basic-info {
+	height: 20%;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1em;
+}
+
+#profile-image-info {
+	aspect-ratio: 1/1;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+#profile-image-info>label {
+	aspect-ratio: 1/1;
+	height: 70%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#profile-image-info>label>img {
+	aspect-ratio: 1/1;
+	height: 100%;
+	border-radius: 100%;
+	object-fit: fill;
+}
+
+#bio-and-name-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-start;
+	gap: 1em;
+	height: 100%;
+	width: 80%;
+}
+
+#edit-personal-info {
+	width: 100%;
+	gap: 1em;
+}
+
+#personal-info-grid {
+	padding-top: 0.7em;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-auto-flow: row;
+	gap: 1em;
+}
+
+#edit-school-info {
+	width: 100%;
+}
+
+#school-info-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 1em;
+}
+
+#edit-social-info {
+	width: 100%;
+	gap: 1em;
+}
+
+#social-info-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1em;
+}
+
+.form-field {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+	width: 100%;
+	gap: 0.4em;
+}
+
+.date-field {
+	flex-direction: row;
+}
+
+.form-field input {
+	border: 1px solid black;
+	width: 100%;
+	height: 100%;
+	padding: 0.5em;
+	transition: 0.2s ease;
+}
+
+.form-field input:active,
+.form-field input:focus {
+	outline: none;
+	border-color: var(--primary-color);
+	box-shadow: 0px 0px 10px 1px #695acdba;
+}
+
+.form-field textarea {
+	border: 1px solid black;
+	width: 100%;
+	padding: 1em;
+	transition: 0.2s ease;
+}
+
+.form-field textarea:active,
+.form-field textarea:focus {
+	outline: none;
+	border-color: var(--primary-color);
+	box-shadow: 0px 0px 10px 1px #695acd84;
+}
+
+.form-field select {
+	border: 1px solid black;
+	width: 100%;
+	height: 100%;
+	padding: 0.5em;
+	transition: 0.2s ease;
+}
+
+.form-field select:active,
+.form-field select:focus {
+	outline: none;
+	border-color: var(--primary-color);
+	box-shadow: 0px 0px 10px 1px #695acdba;
+}
+
+#edit-profile-submit {
+	padding: 0.6em 1em;
+	color: white;
+	background-color: var(--actionable-color);
+	box-shadow: 0px 0px 5px 1px #0080809c;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
 
 /* profile main section */
 

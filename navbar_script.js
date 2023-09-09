@@ -40,6 +40,7 @@ languageItems.forEach(item => item.addEventListener('click', (event) => {
 
 // ========================================== Handles the drop down menu button
 
+const profileDropDown = document.querySelector('#profile-dropdown')
 const menuButton = document.querySelector('#dropdown-button')
 const menuList = document.querySelector('#dropdown-list')
 
@@ -73,12 +74,17 @@ function morphToMenuButton() {
   menuButton.classList.add('menu-button')
 }
 
-menuButton?.addEventListener('blur', () => {
-  morphToMenuButton()
-  menuList.classList.remove('visible-menu')
+
+menuList?.addEventListener('blur', () => {
+  setTimeout(() => {
+    morphToMenuButton()
+    menuList.classList.remove('visible-menu')
+  }, 0.1 * 1000)
 })
 
-menuButton?.addEventListener('click', (event) => {
+
+profileDropDown?.addEventListener('click', (event) => {
   event.target.classList.contains('menu-button') ? morphToCloseButton() : morphToMenuButton()
-  menuList.classList.toggle('visible-menu')
+  menuList.classList.add('visible-menu')
+  menuList.focus()
 })
