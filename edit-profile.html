@@ -46,11 +46,11 @@
                 <div id="profile-image-wrapper">
                     <img src="assets/images/matthew-manuel-BhLSBX-0rnM-unsplash.jpg" alt="" />
                 </div>
-
+        
                 <ul tabindex="0" id="dropdown-list">
                     <div id="dropdown-triangle"></div>
                     <li id="menu-header">
-                        <a id="" href="">
+                        <a id="" href="profile.html">
                             <img src="assets/images/women-unsplash.jpg" alt="" />
                             <span>Francelle Patricia</span>
                         </a>
@@ -63,7 +63,7 @@
                         </a>
                     </li>
                     <li tabindex="0">
-                        <a href="">
+                        <a href="profile.html">
                             <img src="assets/icons/person.svg" alt="" />
                             <span>Profile</span>
                         </a>
@@ -79,7 +79,7 @@
                     <li tabindex="0">
                         <a href="">
                             <img src="assets/icons/logout.svg" alt="" />
-                            <span>ce deconnecter</span>
+                            <span>se deconnecter</span>
                         </a>
                     </li>
                 </ul>
@@ -140,16 +140,31 @@
                         <label for="">sexe</label>
                         <select name="" id="">
                             <option value=""></option>
-                            <option value="H">Home</option>
-                            <option value="F">Homme</option>
+                            <option value="H">Homme</option>
+                            <option value="F">Femme</option>
                         </select>
                     </div>
                     <div class="form-field">
                         <label for="">Date de naissance</label>
                         <div class="form-field date-field">
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
+                            <input name="user-birth-day" type="number" max="31" min="1" />
+                            <select name="user-birth-month" id="">
+                                <option value="01">Janvier</option>
+                                <option value="02">Fevrier</option>
+                                <option value="03">Mars</option>
+                                <option value="04">Avril</option>
+                                <option value="05">Mais</option>
+                                <option value="06">Juin</option>
+                                <option value="07">Juillet</option>
+                                <option value="08">Aout</option>
+                                <option value="09">Septembre</option>
+                                <option value="10">Octobre</option>
+                                <option value="11">Novembre</option>
+                                <option value="12">Decembre</option>
+                            </select>
+                            <select name="user-birth-year" id="">
+
+                            </select>
                         </div>
                     </div>
                     <div class="form-field">
@@ -325,6 +340,7 @@
         </section>
     </footer>
     <script src="navbar_script.js"></script>
+    <script src="edit_profile_script.js"></script>
 </body>
 
 </html>
