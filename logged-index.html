@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="index-header">
+        <a href="offer-detail-etudiant.html"><img id="logo-image" src="assets/icons/africarxiv.svg" alt=""></a>
+        <div id="option-menu">
+            <div tabindex="0" id="language-select">
+                <div id="selected-language">
+                    <img src="assets/icons/flag-uk.svg" alt="" />
+                    <span>Eng</span>
+                </div>
+                <img src="assets/icons/down-fill.svg" alt="" />
+                <ul id="language-list">
+                    <li>
+                        <img src="assets/icons/flag-france.svg" alt="" />
+                        <span>Francais</span>
+                    </li>
+                    <li>
+                        <img src="assets/icons/flag-uk.svg" alt="" />
+                        <span>English</span>
+                    </li>
+                </ul>
+            </div>
+            <a id="notifications-link" href="">
+                <img src="assets/icons/bell-fill.svg" alt="" />
+                <span class="new-unseen">5</span>
+            </a>
+            <a id="messages-link" href="">
+                <img src="assets/icons/baseline-email.svg" alt="" />
+                <span class="new-unseen">3</span>
+            </a>
+            <button tabindex="0" id="profile-dropdown">
+                <span id="dropdown-button" class="menu-button">
+                    <span class="dropdown-span visible-line"></span>
+                    <span class="dropdown-span visible-line"></span>
+                    <span class="dropdown-span visible-line"></span>
+                </span>
+                <div id="profile-image-wrapper">
+                    <img src="assets/images/matthew-manuel-BhLSBX-0rnM-unsplash.jpg" alt="" />
+                </div>
+        
+                <ul tabindex="0" id="dropdown-list">
+                    <div id="dropdown-triangle"></div>
+                    <li id="menu-header">
+                        <a id="profile.html" href="profile.html">
+                            <img src="assets/images/women-unsplash.jpg" alt="" />
+                            <span>Francelle Patricia</span>
+                        </a>
+                    </li>
+                    <hr />
+                    <li tabindex="0">
+                        <a href="">
+                            <img src="assets/icons/table-solid.svg" alt="" />
+                            <span>Tableau de bord</span>
+                        </a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="profile.html">
+                            <img src="assets/icons/person.svg" alt="" />
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <hr />
+                    <li tabindex="0">
+                        <a href="">
+                            <img src="assets/icons/sharp-history.svg" alt="" />
+                            <span>Historique de stages</span>
+                        </a>
+                    </li>
+                    <hr />
+                    <li tabindex="0">
+                        <a href="">
+                            <img src="assets/icons/logout.svg" alt="" />
+                            <span>se deconnecter</span>
+                        </a>
+                    </li>
+                </ul>
+            </button>
+        </div>
+        <div class="navbar">
+            <div id="nav-search">
+                <button><img src="assets/icons/search-line.svg" alt=""></button>
+                <input type="text">
+            </div>
+
+            <nav>
+                <a class="nav-link active" href="">Acceuil</a>
+                <a class="nav-link" href="">A propos de nous</a>
+                <a class="nav-link" href="">Nos services</a>
+                <a class="nav-link" href="">Realiser un CV</a>
+                <a class="nav-link" href="">Trouver un stage</a>
+                <a class="nav-link" href="">Formation</a>
+                <a class="nav-link" href="">Actualite</a>
+                <a class="nav-link" href="">Nous contacter</a>
+
+            </nav>
+        </div>
+    </header>
+    <main id="index-main">
+        <div class="main-filter" id="login-filter">
+            <form id="login-form" action="">
+                <div class="form-header">
+                    <h2>Connectez vous a votre compte</h2>
+                </div>
+                <div class="form-main">
+                    <div class="block">
+                        <div class="form-input">
+                            <input type="email" required>
+                            <label for="">Email</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="password" required>
+                            <label for="">Mot de passe</label>
+                        </div>
+                        <div id="social-connect">
+                            <a class="connect-option">
+                                <img src="assets/icons/google.svg" alt="">
+                            </a>
+                            <a class="connect-option">
+                                <img src="assets/icons/facebook.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <button id="login-button" type="submit">se connecter</button>
+                    <div class="form-input">
+                        <p>Vous n'avez pas de compte ? <a href="signup.html">Inscrivez vous ici</a></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="main-filter" id="signup-filter">
+            <form id="signup-form" action="" method="POST" enctype="multipart/form-data">
+                <div class="form-header">
+                    <h2>Inscrivez vous c'est gratuit !</h2>
+                </div>
+                <div class="form-main">
+                    <div id="block-1" class="block current">
+                        <div class="group-input">
+                            <div class="form-input">
+                                <input type="text" required>
+                                <label for="">Nom</label>
+                            </div>
+                            <div class="form-input">
+                                <input type="text" required>
+                                <label for="">Prenom</label>
+                            </div>
+                        </div>
+                        <div class="form-input">
+                            <input type="email" required>
+                            <label for="">Email</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="password" required>
+                            <label for="">Mot de passe</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="password" required>
+                            <label for="">Repeter le mot de passe</label>
+                        </div>
+                        <p>se connecter avec </p>
+                        <div id="social-connect">
+                            <a class="connect-option" href="#">
+                                <img src="assets/icons/google.svg" alt="">
+                            </a>
+                            <a class="connect-option" href="#">
+                                <img src="assets/icons/facebook.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div id="block-2" class="block">
+                        <div class="picture-input">
+                            <img id="profile-display" src="assets/icons/user.svg" alt="">
+                        </div>
+                        <div class="form-input">
+                            <input type="text" required>
+                            <label for="">Nom d'utilisateur</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="password" required>
+                            <label for="">Etablissement</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="password" required>
+                            <label for="">Niveau</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="number" required>
+                            <label for="">Matricule</label>
+                        </div>
+                        <div class="check-input">
+                            <input type="checkbox">
+                            <label for="">J'accepte les conditions de confidentialite</label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-action">
+                    <button id="follow-button" type="button" onclick="handleNextBlock()">suivant >></button>
+                    <button id="signup-button" type="submit">S'inscrire</button>
+                    <div class="form-input">
+                        <p>deja un compte ? <a href="login.html">connectez vous maintenant</a></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <section id="hero-section">
+            <img class="pub-image current" src="assets/images/school-pub.jpg" alt="">
+            <img class="pub-image" src="assets/images/school-pub2.jpg" alt="">
+            <img class="pub-image" src="assets/images/school-pub3.jpg" alt="">
+        </section>
+        <section id="main-section">
+            <div id="fields-sidebar">
+                <div id="item-search-wrapper">
+                    <div id="item-search-bar">
+                        <button>
+                            <img src="assets/icons/search-line.svg" alt="">
+                        </button>
+                        <input type="text" placeholder="trouver un domaine...">
+                    </div>
+                </div>
+                <ul id="field-item-wrapper">
+                    <li class="field-item">
+                        <img src="assets/icons/baseline-computer.svg" alt="">
+                        <span>INFORMATIQUE</span>
+                    </li>
+                    <li class="field-item">
+                        <img src="assets/icons/health-solid.svg" alt="">
+                        <span>MEDECINE</span>
+                    </li>
+                    <li class="field-item">
+                        <img src="assets/icons/law-16.svg" alt="">
+                        <span>DROIT</span>
+                    </li>
+                    <li class="field-item">
+                        <img src="assets/icons/money-bank-institution-money-saving-bank-payment-finance.svg" alt="">
+                        <span>FINANCE</span>
+                    </li>
+                    <li class="field-item">
+                        <img src="assets/icons/management.svg" alt="">
+                        <span>MANAGEMENT</span>
+                    </li>
+                    <li class="field-item">
+                        <img src="assets/icons/construction-worker.svg" alt="">
+                        <span>GENIE CIVIL</span>
+                    </li>
+                    <li class="field-item">
+                        <img src="assets/icons/electricity.svg" alt="">
+                        <span>GENIE ELECTRIQUE</span>
+                    </li>
+                    <li class="field-item">
+                        <img src="assets/icons/baseline-hotel.svg" alt="">
+                        <span>HOTELERIE</span>
+                    </li>
+                    <li class="field-item">
+                        <img src="assets/icons/office.svg" alt="">
+                        <span>BUREAUTIQUE</span>
+                    </li>
+                    <li class="field-item">
+                        <img src="assets/icons/ecology-science-erlenmeyer-flask-experiment-lab-flask-science-chemistry-solution.svg"
+                            alt="">
+                        <span>GENIE DES PROCEDES</span>
+                    </li>
+                    <li class="field-item">
+                        <img src="assets/icons/gear.svg" alt="">
+                        <span>MECANIQUE</span>
+                    </li>
+                    <li class="field-item">
+                        <img src="assets/icons/plant-fill.svg" alt="">
+                        <span>AGRICULTURE</span>
+                    </li>
+                    <li class="field-item">
+                        <img src="assets/icons/computer-robot-cyborg-artificial-robotics-robot-intelligence-machine-technology-android.svg"
+                            alt="">
+                        <span>MECATRONIQUE</span>
+                    </li>
+                    <li class="field-item">
+                        <img src="assets/icons/electricity.svg" alt="">
+                        <span>COUTURE</span>
+                    </li>
+                    <li class="field-item">
+                        <img src="assets/icons/sharp-food-bank.svg" alt="">
+                        <span>SERVICE TRAITEUR</span>
+                    </li>
+                    <li class="field-item">
+                        <img src="assets/icons/sharp-people.svg" alt="">
+                        <span>Resources Humaine</span>
+                    </li>
+
+                </ul>
+            </div>
+            <div id="offers-wrapper">
+                <div id="company-description">
+                    <div id="desc-text">
+                        <h1>Trouvez facilement des stages</h1>
+                        <p>
+                            nous mettons a votre disposition tout un
+                            panels de stages academiques et
+                            professionnels qui vous permettent d'enrichire
+                            votre apprentissage et faire face au millieu professionnel
+                        </p>
+                        <button><span>Inscrivez vous</span></button>
+                    </div>
+                    <img id="desc-image" src="assets/Kids Studying from Home-bro.svg"></img>
+                </div>
+                <div id="offers-container">
+                    <h2>Nos offres</h2>
+                    <div id="offers-list">
+                        <div class="internship-card">
+                            <img src="assets/images/camtel building.jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/camtel logo.png" alt="">
+                                <p>Nom: Camtel</p>
+                                <p>Situe A: Ange Raphael . Douala Cameroun</p>
+                                <p>Places Disponible: 08</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/krystal palace building (1).jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/krystal palace logo.png" alt="">
+                                <p>Nom: Krystal Palace</p>
+                                <p>Situe A: Akwa . Douala Cameroun</p>
+                                <p>Places Disponible: 18</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/UBA building (1).jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/UBA logo.jpg" alt="">
+                                <p>Nom: UBA</p>
+                                <p>Situe A: Ange Raphael . Douala Cameroun</p>
+                                <p>Places Disponible: 03</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/matthew-manuel-BhLSBX-0rnM-unsplash.jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/microsoft logo.jpg" alt="">
+                                <p>Nom: Microsoft</p>
+                                <p>Situe A: Vancouver . CANADA</p>
+                                <p>Places Disponible: 05</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+
+                        <div class="internship-card">
+                            <img src="assets/images/UBA building (1).jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/UBA logo.jpg" alt="">
+                                <p>Nom: UBA</p>
+                                <p>Situe A: Ange Raphael . Douala Cameroun</p>
+                                <p>Places Disponible: 03</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/camtel building.jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/camtel logo.png" alt="">
+                                <p>Nom: Camtel</p>
+                                <p>Situe A: Ange Raphael . Douala Cameroun</p>
+                                <p>Places Disponible: 08</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/krystal palace building (1).jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/krystal palace logo.png" alt="">
+                                <p>Nom: Krystal Palace</p>
+                                <p>Situe A: Akwa . Douala Cameroun</p>
+                                <p>Places Disponible: 18</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/UBA building (1).jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/UBA logo.jpg" alt="">
+                                <p>Nom: UBA</p>
+                                <p>Situe A: Ange Raphael . Douala Cameroun</p>
+                                <p>Places Disponible: 03</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/matthew-manuel-BhLSBX-0rnM-unsplash.jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/microsoft logo.jpg" alt="">
+                                <p>Nom: Microsoft</p>
+                                <p>Situe A: Vancouver . CANADA</p>
+                                <p>Places Disponible: 05</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+
+                        <div class="internship-card">
+                            <img src="assets/images/UBA building (1).jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/UBA logo.jpg" alt="">
+                                <p>Nom: UBA</p>
+                                <p>Situe A: Ange Raphael . Douala Cameroun</p>
+                                <p>Places Disponible: 03</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/camtel building.jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/camtel logo.png" alt="">
+                                <p>Nom: Camtel</p>
+                                <p>Situe A: Ange Raphael . Douala Cameroun</p>
+                                <p>Places Disponible: 08</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/krystal palace building (1).jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/krystal palace logo.png" alt="">
+                                <p>Nom: Krystal Palace</p>
+                                <p>Situe A: Akwa . Douala Cameroun</p>
+                                <p>Places Disponible: 18</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/camtel building.jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/camtel logo.png" alt="">
+                                <p>Nom: Camtel</p>
+                                <p>Situe A: Ange Raphael . Douala Cameroun</p>
+                                <p>Places Disponible: 08</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/krystal palace building (1).jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/krystal palace logo.png" alt="">
+                                <p>Nom: Krystal Palace</p>
+                                <p>Situe A: Akwa . Douala Cameroun</p>
+                                <p>Places Disponible: 18</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/UBA building (1).jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/UBA logo.jpg" alt="">
+                                <p>Nom: UBA</p>
+                                <p>Situe A: Ange Raphael . Douala Cameroun</p>
+                                <p>Places Disponible: 03</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/matthew-manuel-BhLSBX-0rnM-unsplash.jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/microsoft logo.jpg" alt="">
+                                <p>Nom: Microsoft</p>
+                                <p>Situe A: Vancouver . CANADA</p>
+                                <p>Places Disponible: 05</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+
+                        <div class="internship-card">
+                            <img src="assets/images/camtel building.jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/camtel logo.png" alt="">
+                                <p>Nom: Camtel</p>
+                                <p>Situe A: Ange Raphael . Douala Cameroun</p>
+                                <p>Places Disponible: 08</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/krystal palace building (1).jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/krystal palace logo.png" alt="">
+                                <p>Nom: Krystal Palace</p>
+                                <p>Situe A: Akwa . Douala Cameroun</p>
+                                <p>Places Disponible: 18</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/UBA building (1).jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/UBA logo.jpg" alt="">
+                                <p>Nom: UBA</p>
+                                <p>Situe A: Ange Raphael . Douala Cameroun</p>
+                                <p>Places Disponible: 03</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/matthew-manuel-BhLSBX-0rnM-unsplash.jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/microsoft logo.jpg" alt="">
+                                <p>Nom: Microsoft</p>
+                                <p>Situe A: Vancouver . CANADA</p>
+                                <p>Places Disponible: 05</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+
+                        <div class="internship-card">
+                            <img src="assets/images/UBA building (1).jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/UBA logo.jpg" alt="">
+                                <p>Nom: UBA</p>
+                                <p>Situe A: Ange Raphael . Douala Cameroun</p>
+                                <p>Places Disponible: 03</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudinat.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/camtel building.jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/camtel logo.png" alt="">
+                                <p>Nom: Camtel</p>
+                                <p>Situe A: Ange Raphael . Douala Cameroun</p>
+                                <p>Places Disponible: 08</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/krystal palace building (1).jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/krystal palace logo.png" alt="">
+                                <p>Nom: Krystal Palace</p>
+                                <p>Situe A: Akwa . Douala Cameroun</p>
+                                <p>Places Disponible: 18</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/UBA building (1).jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/UBA logo.jpg" alt="">
+                                <p>Nom: UBA</p>
+                                <p>Situe A: Ange Raphael . Douala Cameroun</p>
+                                <p>Places Disponible: 03</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/matthew-manuel-BhLSBX-0rnM-unsplash.jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/microsoft logo.jpg" alt="">
+                                <p>Nom: Microsoft</p>
+                                <p>Situe A: Vancouver . CANADA</p>
+                                <p>Places Disponible: 05</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+
+                        <div class="internship-card">
+                            <img src="assets/images/UBA building (1).jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/UBA logo.jpg" alt="">
+                                <p>Nom: UBA</p>
+                                <p>Situe A: Ange Raphael . Douala Cameroun</p>
+                                <p>Places Disponible: 03</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/camtel building.jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/camtel logo.png" alt="">
+                                <p>Nom: Camtel</p>
+                                <p>Situe A: Ange Raphael . Douala Cameroun</p>
+                                <p>Places Disponible: 08</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/krystal palace building (1).jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/krystal palace logo.png" alt="">
+                                <p>Nom: Krystal Palace</p>
+                                <p>Situe A: Akwa . Douala Cameroun</p>
+                                <p>Places Disponible: 18</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/UBA building (1).jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/UBA logo.jpg" alt="">
+                                <p>Nom: UBA</p>
+                                <p>Situe A: Ange Raphael . Douala Cameroun</p>
+                                <p>Places Disponible: 03</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/camtel building.jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/camtel logo.png" alt="">
+                                <p>Nom: Camtel</p>
+                                <p>Situe A: Ange Raphael . Douala Cameroun</p>
+                                <p>Places Disponible: 08</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/krystal palace building (1).jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/krystal palace logo.png" alt="">
+                                <p>Nom: Krystal Palace</p>
+                                <p>Situe A: Akwa . Douala Cameroun</p>
+                                <p>Places Disponible: 18</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/UBA building (1).jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/UBA logo.jpg" alt="">
+                                <p>Nom: UBA</p>
+                                <p>Situe A: Ange Raphael . Douala Cameroun</p>
+                                <p>Places Disponible: 03</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/matthew-manuel-BhLSBX-0rnM-unsplash.jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/microsoft logo.jpg" alt="">
+                                <p>Nom: Microsoft</p>
+                                <p>Situe A: Vancouver . CANADA</p>
+                                <p>Places Disponible: 05</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+
+                        <div class="internship-card">
+                            <img src="assets/images/UBA building (1).jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/UBA logo.jpg" alt="">
+                                <p>Nom: UBA</p>
+                                <p>Situe A: Ange Raphael . Douala Cameroun</p>
+                                <p>Places Disponible: 03</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/camtel building.jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/camtel logo.png" alt="">
+                                <p>Nom: Camtel</p>
+                                <p>Situe A: Ange Raphael . Douala Cameroun</p>
+                                <p>Places Disponible: 08</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                        <div class="internship-card">
+                            <img src="assets/images/krystal palace building (1).jpg" class="image-section" />
+                            <div class="detail-section">
+                                <img class="company-logo" src="assets/company logos/krystal palace logo.png" alt="">
+                                <p>Nom: Krystal Palace</p>
+                                <p>Situe A: Akwa . Douala Cameroun</p>
+                                <p>Places Disponible: 18</p>
+                                <div class="share-offer-section">
+                                    <img src="assets/icons/share_offer.svg" alt="">
+                                </div>
+                                <a class="detail-link" href="offer-detail-etudiant.html">Consulter</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="page-navigation-container">
+                        <div id="navigation-wrapper">
+                            <input name="current-btn-group" type="number" value=1 style="display: none;">
+                            <button id="previous-page-btn" value=0>
+                                <img src="assets/icons/next-rtl.svg" alt="">
+                            </button>
+                            <button class="btn-1 page-button active-page-btn" value=1>1</button>
+                            <button class="btn-2 page-button" value=2>2</button>
+                            <button class="btn-3 page-button" value=3>3</button>
+                            <button class="btn-4 page-button" value=4>4</button>
+                            <button id="next-page-btn" value=2>
+                                <img src="assets/icons/next-ltr.svg" alt="">
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="index-footer">
+        <section id="partners-section">
+            <div id="partners-section-title">Nos Partenaires</div>
+            <div id="partners-wrapper">
+                <div class="partner-container">
+                    <div class="partner-title">
+                        <h2>Ecoles</h2>
+                    </div>
+                    <div class="partner-images">
+                        <img src="assets/school logos/logo enspd.jpg" alt="">
+                        <img src="assets/school logos/ime logo.png" alt="">
+                        <img src="assets/school logos/iuc logo.jpg" alt="">
+                        <img src="assets/school logos/logo enspd.jpg" alt="">
+                        <img src="assets/school logos/ime logo.png" alt="">
+                        <img src="assets/school logos/iuc logo.jpg" alt="">
+                    </div>
+                </div>
+                <div class="partner-container">
+                    <div class="partner-title">
+                        <h2>Entreprises</h2>
+                    </div>
+                    <div class="partner-images">
+                        <img src="assets/company logos/camtel logo.png" alt="">
+                        <img src="assets/company logos/camwater.jpg" alt="">
+                        <img src="assets/company logos/eneo logo.png" alt="">
+                        <img src="assets/company logos/krystal palace logo.png" alt="">
+                        <img src="assets/company logos/camtel logo.png" alt="">
+                        <img src="assets/company logos/camwater.jpg" alt="">
+                        <img src="assets/company logos/eneo logo.png" alt="">
+                        <img src="assets/company logos/krystal palace logo.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="newsletter">
+            <div id="newsletter-title">
+                <h1>Inscrivez vous a notre newsletter</h1>
+            </div>
+            <form id="newsletter-form" action="">
+                <input type="text" name="" id="">
+                <button type="submit">Inscrivez vous</button>
+            </form>
+        </section>
+        <section id="index">
+            <div id="index-list-wrapper">
+                <div class="index-list-container">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li>Informatique</li>
+                        <li>Medecine</li>
+                        <li>Gestion</li>
+                        <li>Comptabilite</li>
+                        <li>Finance</li>
+                        <li>Droit</li>
+                        <li>Genie Civil</li>
+                        <li>Genie Electrique</li>
+                    </ul>
+                </div>
+                <div class="index-list-container">
+                    <h3>A Propos</h3>
+                    <ul>
+                        <li>Accord et confidentialite</li>
+                        <li>Partenaria</li>
+                        <li>Blog</li>
+                        <li>Communaute</li>
+                    </ul>
+                </div>
+                <div class="index-list-container">
+                    <h3>Support et Education</h3>
+                    <ul>
+                        <li>Support et Aide</li>
+                        <li>Proposer un stage</li>
+                        <li>Postuler pour un stage</li>
+                        <li>Suivre son stagiaire</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="more-info-wrapper">
+                <p>Copy right (c) Rainbow-Cl sarl 2023</p>
+
+                <div class="more-info-container">
+                    <img src="assets/icons/sharp-phone.svg" alt="">
+                    <div class="text-section">
+                        <h4>Contactez Nous</h4>
+                        <span>+237 6 74 39 24 64</span>
+                    </div>
+                </div>
+                <div class="more-info-container">
+                    <img src="assets/icons/round-mail.svg" alt="">
+                    <div class="text-section">
+                        <h4>Service Email</h4>
+                        <span>NgnotchoueTiam@gmail.com</span>
+                    </div>
+                </div>
+                <div class="more-info-container">
+                    <img src="assets/icons/network.svg" alt="">
+                    <div class="text-section">
+                        <h4>Nos Reseaux</h4>
+                        <div id="social-images">
+                            <img src="assets/icons/whatsapp-icon.svg" alt="">
+                            <img src="assets/icons/facebook.svg" alt="">
+                            <img src="assets/icons/twitter.svg" alt="">
+                            <img src="assets/icons/linkedin.svg" alt="">
+                            <img src="assets/icons/instagram.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <script src="./navbar_script.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

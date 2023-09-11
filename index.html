@@ -9,13 +9,27 @@
 </head>
 
 <body>
-    <header>
+    <header id="index-header">
         <a href="index.html"><img id="logo-image" src="assets/icons/africarxiv.svg" alt=""></a>
         <div id="option-menu">
-            <select name="languages" id="language-select">
-                <option value="francais">Fr</option>
-                <option value="englais">Eng</option>
-            </select>
+            <div tabindex="0" id="language-select">
+                <div id="selected-language">
+                    <img src="assets/icons/flag-uk.svg" alt="">
+                    <span>Eng</span>
+                </div>
+                <img src="assets/icons/down-fill.svg" alt="">
+                <ul id="language-list">
+                    <li >
+                        <img src="assets/icons/flag-france.svg" alt="">
+                        <span>Francais</span>
+                    </li>
+                    <li >
+                        <img src="assets/icons/flag-uk.svg" alt="">
+                        <span>English</span>
+                    </li>
+                    
+                </ul>
+            </div>
             <button id="login-btn-link" value='login'>Login</button>
             <button id="signup-btn-link" value="signup">Signup</button>
         </div>
@@ -29,7 +43,7 @@
                 <a class="nav-link active" href="">Acceuil</a>
                 <a class="nav-link" href="">A propos de nous</a>
                 <a class="nav-link" href="">Nos services</a>
-                <a class="nav-link" href="">Realiser un CV</a>
+                <a class="nav-link" href="cv.html">Realiser un CV</a>
                 <a class="nav-link" href="">Trouver un stage</a>
                 <a class="nav-link" href="">Trouver une formation</a>
                 <a class="nav-link" href="">Actualite</a>
@@ -40,7 +54,11 @@
     </header>
     <main id="index-main">
         <div class="main-filter" id="login-filter">
-            <form id="login-form" action="">
+            <form id="login-form" action="" method="POST">
+                <button type="button" class="close-form-button" value="login">
+                    <img src="assets/icons/close.svg" alt="">
+                </button>
+
                 <div class="form-header">
                     <h2>Connectez vous a votre compte</h2>
                 </div>
@@ -74,6 +92,9 @@
         </div>
         <div class="main-filter" id="signup-filter">
             <form id="signup-form" action="" method="POST" enctype="multipart/form-data">
+                <button type="button" class="close-form-button" value="signup">
+                    <img src="assets/icons/close.svg" alt="">
+                </button>
                 <div class="form-header">
                     <h2>Inscrivez vous c'est gratuit !</h2>
                 </div>
@@ -81,25 +102,29 @@
                     <div id="block-1" class="block current">
                         <div class="group-input">
                             <div class="form-input">
-                                <input type="text" required>
+                                <input type="text" name="first-name" required>
                                 <label for="">Nom</label>
                             </div>
                             <div class="form-input">
-                                <input type="text" required>
+                                <input type="text" name="last-name" required>
                                 <label for="">Prenom</label>
                             </div>
                         </div>
                         <div class="form-input">
-                            <input type="email" required>
+                            <input type="email" name="email" required>
                             <label for="">Email</label>
                         </div>
                         <div class="form-input">
-                            <input type="password" required>
-                            <label for="">Mot de passe</label>
+                            <input type="text" name="school" required>
+                            <label for="">Etablissement</label>
                         </div>
                         <div class="form-input">
-                            <input type="password" required>
-                            <label for="">Repeter le mot de passe</label>
+                            <input type="number" name="level" required>
+                            <label for="">Niveau</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="tel" name="tel" required>
+                            <label for="">Numero de telephone</label>
                         </div>
                         <p>se connecter avec </p>
                         <div id="social-connect">
@@ -112,35 +137,41 @@
                         </div>
                     </div>
                     <div id="block-2" class="block">
-                        <div class="picture-input">
-                            <img id="profile-display" src="assets/icons/user.svg" alt="">
-                        </div>
                         <div class="form-input">
-                            <input type="text" required>
+                            <input type="text" name="username" required>
                             <label for="">Nom d'utilisateur</label>
                         </div>
                         <div class="form-input">
-                            <input type="password" required>
-                            <label for="">Etablissement</label>
-                        </div>
-                        <div class="form-input">
-                            <input type="password" required>
-                            <label for="">Niveau</label>
-                        </div>
-                        <div class="form-input">
-                            <input type="number" required>
+                            <input type="text" name="user-matricule" required>
                             <label for="">Matricule</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="password" name="password" required>
+                            <label for="">Mot de passe</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="password" name="password-repeat" required>
+                            <label for="">Repeter le mot de passe</label>
                         </div>
                         <div class="check-input">
                             <input type="checkbox">
                             <label for="">J'accepte les conditions de confidentialite</label>
                         </div>
+                        <p>se connecter avec </p>
+                        <div id="social-connect">
+                            <a class="connect-option" href="#">
+                                <img src="assets/icons/google.svg" alt="">
+                            </a>
+                            <a class="connect-option" href="#">
+                                <img src="assets/icons/facebook.svg" alt="">
+                            </a>
+                        </div>
                     </div>
 
                 </div>
                 <div class="form-action">
-                    <button id="follow-button" type="button" onclick="handleNextBlock()">suivant >></button>
-                    <button id="signup-button" type="submit">S'inscrire</button>
+                    <button id="follow-button" type="button">suivant >></button>
+                    <button id="signup-button" type="submit" onclick="alert('clicked')" disabled>S'inscrire</button>
                     <div class="form-input">
                         <p>deja un compte ? <a href="login.html">connectez vous maintenant</a></p>
                     </div>
@@ -260,7 +291,9 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
+                            <a class="detail-link" href="offer-details.html">consulter</a>
                         </div>
                         <div class="internship-card">
                             <img src="assets/images/krystal palace building (1).jpg" class="image-section" />
@@ -272,6 +305,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -284,6 +318,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -296,6 +331,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         
@@ -309,6 +345,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -321,6 +358,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -333,6 +371,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -345,6 +384,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -357,6 +397,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         
@@ -370,6 +411,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -382,6 +424,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -394,6 +437,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -406,6 +450,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -418,6 +463,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -430,6 +476,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -442,6 +489,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         
@@ -455,6 +503,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -467,6 +516,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -479,6 +529,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -491,6 +542,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         
@@ -504,6 +556,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -516,6 +569,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -528,6 +582,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -540,6 +595,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -552,6 +608,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         
@@ -565,6 +622,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -577,6 +635,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -589,6 +648,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -601,6 +661,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -613,6 +674,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -625,6 +687,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -637,6 +700,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -649,6 +713,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         
@@ -662,6 +727,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -674,6 +740,7 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                         <div class="internship-card">
@@ -686,20 +753,21 @@
                                 <div class="share-offer-section">
                                     <img src="assets/icons/share_offer.svg" alt="">
                                 </div>
+                                <a class="detail-link" href="offer-details.html">Consulter</a>
                             </div>
                         </div>
                     </div>
                     <div id="page-navigation-container">
                         <div id="navigation-wrapper">
-                            <input name="current-page" type="number" value=1 style="display: none;">
-                            <button id="previous-page-btn">
+                            <input name="current-btn-group" type="number" value=1 style="display: none;">
+                            <button id="previous-page-btn" value=0>
                                 <img src="assets/icons/next-rtl.svg" alt="">
                             </button>
-                            <button class="page-button active-page-btn" value=1>1</button>
-                            <button class="page-button" value=2>2</button>
-                            <button class="page-button" value=3>3</button>
-                            <button class="page-button" value=4>4</button>
-                            <button id="next-page-btn">
+                            <button class="btn-1 page-button active-page-btn" value=1>1</button>
+                            <button class="btn-2 page-button" value=2>2</button>
+                            <button class="btn-3 page-button" value=3>3</button>
+                            <button class="btn-4 page-button" value=4>4</button>
+                            <button id="next-page-btn" value=2>
                                 <img src="assets/icons/next-ltr.svg" alt="">
                             </button>
 
@@ -821,6 +889,7 @@
     </footer>
 
     <script src="./script.js"></script>
+    <script src="./navbar_script.js"></script>
 </body>
 
 </html>
