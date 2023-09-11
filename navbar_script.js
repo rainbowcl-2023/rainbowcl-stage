@@ -79,7 +79,7 @@ menuList?.addEventListener('blur', () => {
   setTimeout(() => {
     morphToMenuButton()
     menuList.classList.remove('visible-menu')
-  }, 0.1 * 1000)
+  }, 0.4 * 1000)
 })
 
 

@@ -14,7 +14,7 @@ closeEditButton.addEventListener('click', (event) => {
   const editSection = document.querySelector('#edit-profile-section')
   const body = document.querySelector('body')
   editSection.style['animation'] = 'close-edit-section 0.4s ease forwards'
-  setTimeout(() => editFilter.classList.add('none-profile-filter'), 0.4 * 1000)
+  setTimeout(() => editFilter.classList.add('none-profile-filter'), 1 * 1000)
   body.style['overflow-y'] = 'scroll' 
 })
 
